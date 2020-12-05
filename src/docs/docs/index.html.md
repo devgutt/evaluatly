@@ -1,6 +1,6 @@
 ```INI META
 title = Getting Started
-base = docs/docs.html
+base = docs.html
 slug = start
 
 includes = docs/start.html.md BODY SUBMENU

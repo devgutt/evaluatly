@@ -1,6 +1,6 @@
 ```INI META
 title = Reference
-base = docs/docs.html
+base = docs.html
 slug = start
 
 build = false

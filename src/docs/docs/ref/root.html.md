@@ -1,14 +1,14 @@
 ```INI META
 includes = docs/index.html.md menu menuTop
 title = Root
-base = docs/docs.html
+base = docs.html
 slug = root
 ```
 
 ```MD SUBMENU
 
-- [ {#init-var} Initializing variables](#-init-var-initializing-variables)
-  - [Example](#example)
+- [Initializing variables](#variables)
+- [Example](#example)
 
 ```
 
@@ -84,7 +84,7 @@ Initial filling of variables. See more in [Initializing variables](#init-var) be
 }
 ```
 
-## [](#init-var) {#init-var} Initializing variables
+## [](#variables) {#variables} Initializing variables
 
 Initial filling of variables, in key-value format. 
 

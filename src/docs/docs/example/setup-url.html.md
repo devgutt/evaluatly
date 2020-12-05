@@ -13,7 +13,7 @@ base = raw.html
 <title>My Page</title>
 </head>
 <body>
-    <script src="{% cdn %}/dist/evaluatly-{% evaluatly_version %}.js"></script>
+    <script src="{% root %}/dist/evaluatly-{% evaluatly_version %}.js"></script>
     <script>
         Evaluatly.loadUrl('/docs/example/story.json');
     </script>

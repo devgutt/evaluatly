@@ -1,7 +1,7 @@
 {% set slug = data.META.slug %}
 <div class="menu">
 	<div class="header">
-		<a href="/docs"><img src="{{ data.CONFIG.cdn }}/img/evaluatly-logo-96x46.png"/></a>
+		<a href="/docs"><img src="{{ data.CONFIG.root }}/static/img/evaluatly-logo-96x46.png"/></a>
 		<div class="middle"><span>Docs</span></div>
 		<div>
 			<a href="#" class="hamburger" id="menu-ham">
@@ -16,7 +16,7 @@
 		<li class="{{ slug == item.slug ? 'active' }}">
 			<a href="{{ item.url }}">{{ item.label }}</a>
 			{% if slug == item.slug %}
-			{{ include('docs/submenu.html') }}
+			{{ include('submenu.html') }}
 			{% endif %}
 			{% if item.submenu %}
 			<ul>
@@ -24,7 +24,7 @@
 				<li class="{{ slug == subitem.slug ? 'active' }}">
 					<a href="{{ subitem.url }}">{{ subitem.label }}</a>
 					{% if slug == subitem.slug %}
-						{{ include('docs/submenu.html') }}
+						{{ include('submenu.html') }}
 					{% endif %}
 				</li>
 				{% endfor %}

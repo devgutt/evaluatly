@@ -1,7 +1,7 @@
 ```INI META
 includes = docs/index.html.md menu menuTop
 title = Text manipulation
-base = docs/docs.html
+base = docs.html
 slug = text
 ```
 

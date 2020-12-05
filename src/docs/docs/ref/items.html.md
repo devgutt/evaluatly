@@ -1,7 +1,7 @@
 ```INI META
 includes = docs/index.html.md menu menuTop
 title = Items
-base = docs/docs.html
+base = docs.html
 slug = items
 ```
 
@@ -244,7 +244,7 @@ The values can be a literal value or a single [command](/docs/ref/commands.html)
 ```JSON
 { 
     "type": "image", 
-    "src": "https://cdn.evaluatly.com/img/luna-avatar.png", 
+    "src": "https://evaluatly.com/static/img/luna-avatar.png", 
     "width": 200, 
     "title": "Luna picture" 
 }

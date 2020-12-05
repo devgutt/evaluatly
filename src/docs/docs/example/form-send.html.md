@@ -14,7 +14,7 @@ base = raw.html
 <title>My Page</title>
 </head>
 <body>
-    <script src="{% cdn %}/dist/evaluatly-{% evaluatly_version %}.js"></script>
+    <script src="{% root %}/dist/evaluatly-{% evaluatly_version %}.js"></script>
     <script>
         Evaluatly.loadVar({
             "hash": "example/form-send",     
@@ -68,7 +68,7 @@ base = raw.html
                     },
                     {
                         "items": [
-                            { "type": "image", "src": "{% cdn %}/img/ok.png" },
+                            { "type": "image", "src": "{% root %}/static/img/ok.png" },
                             { "type": "title", "value": "Your message was sent, {{name}}" }
                         ]
                     }

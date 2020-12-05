@@ -1,10 +1,9 @@
 {
     "data": {
         "evaluatly_version": "1.0.1",
-        "cdn": "https://cdn.evaluatly.com",
-        "admin" : "https://app.evaluatly.com"
+        "root": "https://evaluatly.com"
     },
     "build": {
-        "output": "/Users/gustavopires/var/_eval/static/website"
+        "-output": "/Users/gustavopires/var/_eval/static/website"
     }
 }

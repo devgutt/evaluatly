@@ -1,6 +1,6 @@
 ```INI META
 title = Getting Started
-base = docs/docs.html
+base = docs.html
 slug = start
 build = false
 
@@ -35,7 +35,7 @@ Below is a simple example of a story on a regular web page:
 <title>My Page</title>
 </head>
 <body>
-    <script src="{% cdn %}/dist/evaluatly-{% evaluatly_version %}.js"></script>
+    <script src="{% root %}/dist/evaluatly-{% evaluatly_version %}.js"></script>
     <script>
         Evaluatly.loadVar({
             "hash": "example/setup",     
@@ -142,7 +142,7 @@ And then, call `Evaluatly.loadUrl`, informing the URL of the JSON file you have 
 <title>My Page</title>
 </head>
 <body>
-    <script src="{% cdn %}/dist/evaluatly-{% evaluatly_version %}.js"></script>
+    <script src="{% root %}/dist/evaluatly-{% evaluatly_version %}.js"></script>
     <script>
         Evaluatly.loadUrl('/docs/example/story.json');
     </script>
@@ -173,7 +173,7 @@ By default, the story will be shown full screen on the page. If you want to plac
 </head>
 <body>
     <div id="container"></div>
-    <script src="{% cdn %}/dist/evaluatly-{% evaluatly_version %}.js"></script>
+    <script src="{% root %}/dist/evaluatly-{% evaluatly_version %}.js"></script>
     <script>
         Evaluatly.loadUrl('/docs/example/story.json', {
             "containerId": "container"
@@ -299,7 +299,7 @@ Let's create a page to send the information to the server:
             },
             {
                 "items": [
-                    { "type": "image", "src": "{% cdn %}/img/ok.png" },
+                    { "type": "image", "src": "{% root %}/static/img/ok.png" },
                     { "type": "title", "value": "Your message was sent, {{name}}" }
                 ]
             }
@@ -327,7 +327,7 @@ Use the online editor to edit and download the story directly on your browser:
 
 If you prefer, you can download the Evaluatly script file, instead of using the CDN. Right-click the link below and select "Save Link as...":
 
-[Download Script ↘︎]({% cdn %}/dist/evaluatly-{% evaluatly_version %}.js)
+[Download Script ↘︎]({% root %}/dist/evaluatly-{% evaluatly_version %}.js)
 
 ```
 
