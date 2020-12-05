@@ -50,7 +50,7 @@
             },
             {
                 "items": [
-                    { "type": "image", "src": "https://cdn.evaluatly.com/img/ok.png" },
+                    { "type": "image", "src": "https://evaluatly.com/static/img/ok.png" },
                     { "type": "title", "value": "Your message was sent, {{name}}" }
                 ]
             }

@@ -2,8 +2,5 @@
     "data": {
         "evaluatly_version": "1.0.1",
         "root": "https://evaluatly.com"
-    },
-    "build": {
-        "-output": "/Users/gustavopires/var/_eval/static/website"
     }
 }

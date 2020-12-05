@@ -166,12 +166,9 @@ function process_format($format, $txt)
     }
 }
 
-function build($root, $env, $dryRun = false)
+function build($root, $env, $output, $dryRun = false)
 {
     $config = get_config($root, $env);
-
-    $output = $config['build']['output'];
-
     build_dir($root, '', $output, $config, $dryRun);
 }
 
