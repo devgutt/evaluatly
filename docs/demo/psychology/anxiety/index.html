@@ -1,0 +1,397 @@
+{
+    "id": "psy",
+    "title": "Anxiety Test",
+    "hash": "demo/psychology/anxiety",
+    "story": {
+        "info": {
+            "id": "GAD-7",
+            "title": "Anxiety test",
+            "lang": "en"
+        },
+        "env": {
+            "back_label": "Back"
+        },
+        "pages": [
+            {
+                "items": [
+                    { "type": "image", "src": "https://cdn.evaluatly.com/img/demo/psychology-logo.png", "alt": "Logo"},
+                    { "type": "title", "value": "Do you suffer from anxiety? Take the test and find out"},
+                    { "type": "p", "value": "Recognizing and diagnosing anxiety is not always simple. This anonymous test is informative and will help you better understand your mental health."},
+                    { "type": "button", "label": "Get started", "program": [ {"next_page": true} ]}
+                ]
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "How old are you?"},
+                    {
+                        "type": "radio", "save_key": "age", 
+                        "options": [
+                            { "id": "menos-18", "label": "Under 18", "width": "50%" },
+                            { "id": "18-30", "label": "18 to 30 years old", "width": "50%" },
+                            { "id": "31-40", "label": "31 to 40 years old", "width": "50%" },
+                            { "id": "41-50", "label": "41 to 50 years old", "width": "50%" },
+                            { "id": "51-60", "label": "51 to 60 years old", "width": "50%" },
+                            { "id": "mais-60", "label": "More than 60 years old", "width": "50%" }
+                        ]
+                    }
+                ],
+                "submit" : { 
+                    "input_submit": true,
+                    "program":  [ {"next_page": true} ] 
+                } 
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "What is your gender?"},
+                    {
+                        "type": "radio", "save_key": "gender",
+                        "options": [
+                            { "id": "F", "label": "Female", "width": "170px" },
+                            { "id": "M", "label": "Male", "width": "170px" },
+                            { "id": "S", "label": "Other", "width": "170px" }
+                        ]
+                    }
+                ],
+                "submit" : { 
+                    "input_submit": true,
+                    "program":  [ {"next_page": true} ] 
+                } 
+            },
+            {
+                "items": [
+                    { "type": "title", "value": "Instructions"},
+                    { "type": "p", "value": [
+                        "Answer the questions with the following in mind:",
+                        "Over the last **2 weeks**, how often have you been bothered by the following problems?"
+                        ]
+                    },
+                    { "type": "button", "label": "Ok", "program": [ {"next_page": true} ]}
+                ]
+    
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "Feeling nervous, anxious or on edge"},
+                    {
+                        "type": "radio", "save_key": "q1", 
+                        "options": [
+                            { "id": "no", "label": "Not at all", "value": 0 },
+                            { "id": "several-days", "label": "Several days", "value": 1 },
+                            { "id": "more-half-days", "label": "More than half the days", "value": 2 },
+                            { "id": "nearly-every-day", "label": "Nearly every day", "value": 3 }
+                        ]
+                    }
+                ],
+                "submit" : { 
+                    "input_submit": true,
+                    "program":  [ {"next_page": true} ] 
+                } 
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "Not being able to stop or control worrying"},
+                    {
+                        "type": "radio", "save_key": "q2",
+                        "options": [
+                            { "id": "no", "label": "Not at all", "value": 0 },
+                            { "id": "several-days", "label": "Several days", "value": 1 },
+                            { "id": "more-half-days", "label": "More than half the days", "value": 2 },
+                            { "id": "nearly-every-day", "label": "Nearly every day", "value": 3 }
+                        ]
+                    }
+                ],
+                "submit" : { 
+                    "input_submit": true,
+                    "program":  [ {"next_page": true} ] 
+                } 
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "Worrying too much about different things"},
+                    {
+                        "type": "radio", "save_key": "q3",
+                        "options": [
+                            { "id": "no", "label": "Not at all", "value": 0 },
+                            { "id": "several-days", "label": "Several days", "value": 1 },
+                            { "id": "more-half-days", "label": "More than half the days", "value": 2 },
+                            { "id": "nearly-every-day", "label": "Nearly every day", "value": 3 }
+                        ]
+                    }
+                ],
+                "submit" : { 
+                    "input_submit": true,
+                    "program":  [ {"next_page": true} ] 
+                } 
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "Trouble relaxing"},
+                    {
+                        "type": "radio", "save_key": "q4",
+                        "options": [
+                            { "id": "no", "label": "Not at all", "value": 0 },
+                            { "id": "several-days", "label": "Several days", "value": 1 },
+                            { "id": "more-half-days", "label": "More than half the days", "value": 2 },
+                            { "id": "nearly-every-day", "label": "Nearly every day", "value": 3 }
+                        ]
+                    }
+                ],
+                "submit" : { 
+                    "input_submit": true,
+                    "program":  [ {"next_page": true} ] 
+                } 
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "Being so restless that it is hard to sit still"},
+                    {
+                        "type": "radio", "save_key": "q5",
+                        "options": [
+                            { "id": "no", "label": "Not at all", "value": 0 },
+                            { "id": "several-days", "label": "Several days", "value": 1 },
+                            { "id": "more-half-days", "label": "More than half the days", "value": 2 },
+                            { "id": "nearly-every-day", "label": "Nearly every day", "value": 3 }
+                        ]
+                    }
+                ],
+                "submit" : { 
+                    "input_submit": true,
+                    "program":  [ {"next_page": true} ] 
+                } 
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "Becoming easily annoyed or irritable"},
+                    {
+                        "type": "radio", "save_key": "q6",
+                        "options": [
+                            { "id": "no", "label": "Not at all", "value": 0 },
+                            { "id": "several-days", "label": "Several days", "value": 1 },
+                            { "id": "more-half-days", "label": "More than half the days", "value": 2 },
+                            { "id": "nearly-every-day", "label": "Nearly every day", "value": 3 }
+                        ]
+                    }
+                ],
+                "submit" : { 
+                    "input_submit": true,
+                    "program":  [ {"next_page": true} ] 
+                } 
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "Feeling afraid as if something awful might happen"},
+                    {
+                        "type": "radio", "save_key": "q7",
+                        "options": [
+                            { "id": "no", "label": "Not at all", "value": 0 },
+                            { "id": "several-days", "label": "Several days", "value": 1 },
+                            { "id": "more-half-days", "label": "More than half the days", "value": 2 },
+                            { "id": "nearly-every-day", "label": "Nearly every day", "value": 3 }
+                        ]
+                    }
+                ],
+                "submit" : { 
+                    "input_submit": true,
+                    "program":  [ {"next_page": true} ] 
+                } 
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "If you checked off any problems, how difficult have these made it for you to do your work, take care of things at home, or get along with other people? "},
+                    {
+                        "type": "radio", "save_key": "extra-1",
+                        "options": [
+                            { "id": "no", "label": "Not difficult at all" },
+                            { "id": "somewhat", "label": "Somewhat difficult" },
+                            { "id": "very", "label": "Very difficult" },
+                            { "id": "extremely", "label": "Extremely difficult" }
+                        ]
+                    }
+                ],
+                "submit" : { 
+                    "input_submit": true,
+                    "program":  [ {"next_page": true} ] 
+                } 
+            },
+            {
+                "history": false,
+                "items": [
+                    { "type": "title", "value": "Calculating results ..."},
+                    { "type": "exec", "delay": 1000, "program": [
+                        {"save": ["score", {"+": [{"v": "q1"}, {"v": "q2"}, {"v": "q3"}, {"v": "q4"}, {"v": "q5"}, {"v": "q6"}, {"v": "q7"}]}]},
+                        {"if": [
+                            { "cond": {">=": [{"v": "score"}, 15]}, "program": {"save": ["res", "SEVERE"]} },
+                            { "cond": {">=": [{"v": "score"}, 10]}, "program": {"save": ["res", "MODERATE"]} },
+                            { "cond": {">=": [{"v": "score"}, 5]}, "program": {"save": ["res", "MILD"]} },
+                            { "program": {"save": ["res", "NONE"]} }
+                        ]},
+                        {"next_page" : true}
+                    ] }
+                ]
+            },
+            {
+                "items": [
+                    { "type": "subtitle", "value": "Result"},
+                    { "type": "render-If", "value": [
+                        { 
+                            "cond": {"==": [{"v": "res"}, "NONE"]},
+                            "render": [
+                                { "type" : "title", "value": "No anxiety disorder"}
+                            ]
+                        },
+                        { 
+                            "cond": {"==": [{"v": "res"}, "MILD"]},
+                            "render": [
+                                { "type" : "title", "value": "Mild anxiety disorder"}
+                            ]
+                        },
+                        { 
+                            "cond": {"==": [{"v": "res"}, "MODERATE"]},
+                            "render": [
+                                { "type" : "title", "value": "Moderate anxiety disorder"}
+                            ]
+                        },
+                        { 
+                            "cond": {"==": [{"v": "res"}, "SEVERE"]},
+                            "render": [
+                                { "type" : "title", "value": "Severe anxiety disorder"}
+                            ]
+                        }
+                    ]},
+                    { "type" : "p", "value": "This test is exclusively informative, so it does not replace a diagnosis made by a specialist in the field of mental health."},
+                    { "type" : "p", "value": "Contact us if you have any questions or would like more information about the result or treatments available."},
+                    { "type": "button", "label": "Talk to a Psychologist", "program": [ {"next_page": true} ] },
+    
+                    { "type": "line"},
+                    { "type": "p", "value": "This questionnaire was adapted from the test created by Dr. Spitzer and Dr William (GAD-7)"},
+                    { "type": "link", "label": "Start over", "program": [ {"restart": true} ]}
+                ]
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "Enter your contact details" },
+                    { "type": "name", "label": "Name", "save_key": "name", "required": true, "autofocus": true },
+                    { "type": "email", "label": "Email", "save_key": "email", "required": true },
+                    { "type": "phone", "label": "Phone (optional)", "save_key": "phone", "required": false },
+                    {
+                        "type": "check", 
+                        "options": [
+                            { "id": "attach", "save_key": "attach_test", "label": "Include test results in the message", "value": "1"}
+                        ]
+                    }
+                ],
+                "submit" : {
+                    "label": "Next",
+                    "program":  [
+                        {"next_page": true}
+                    ]
+                } 
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "Do you want to add any more information?" },
+                    { "type": "textlong", "save_key": "msg", "autofocus": true}
+                ],
+                "submit" : {
+                    "label": "Send Message",
+                    "program":  [
+                        {"next_page": true}
+                    ]
+                } 
+            },
+            {
+                "history": false,
+                "items": [
+                    { "type": "title", "value": "Sending message..."},
+                    { "type": "exec", "delay": 800, "program": [
+                        {"-if": [
+                            { "cond": {"==": [{"v": "attach_test"}, "1"]}, 
+                                "program": [
+                                    {"call": { 
+                                        "endpoint": "e/void", 
+                                        "data": [ 
+                                            {
+                                                "email_title": "New message: Anxiety test",
+                                                "email_reply_to": {"v": "email"},
+                                                "email_reply_to_name": {"v": "name"}
+                                            },
+                                            "name", "age", "gender", "email", "phone", "msg",
+                                            {"resultado": {"sub": "{{res}} ({{score}})" }},
+                                            "extra-1", "q1","q2","q3","q4","q5","q6","q7"
+                                        ]
+                                    }}
+                                ] },
+                            { "program": [
+                                {"call": { 
+                                    "endpoint": "e/void", 
+                                    "data": [ 
+                                        {
+                                            "email_title": "New message: Anxiety test",
+                                            "email_reply_to": {"v": "email"},
+                                            "email_reply_to_name": {"v": "name"}
+                                        },
+                                        "name", "age", "gender", "email", "phone", "msg"
+                                    ]
+                                }}
+                            ]}
+                        ]},
+                        {"next_page" : true}
+                    ] }
+                ]
+            },
+            {
+                "env": {
+                    "show_back": false
+                },
+                "items": [
+                    { "type": "image", "src": "https://cdn.evaluatly.com/img/demo/psychology-logo.png", "alt": "Logo"},
+                    { "type": "title", "value": "Thank you for your contact, {{name|first}}"},
+                    { "type": "p", "value": "Your message has been sent successfully! We will contact you as soon as possible."}
+                ]
+            }
+        ]
+    },
+    "theme": {
+        "page": {
+            "font-family": "google:Merriweather",
+            "font-size": "20px",
+            "background-color": "#F1F9FA"
+        },
+        "content": {
+            "align-items": "center",
+            "text-align": "center",
+            "justify-content": "center"
+        },
+        "title": {
+            "color" : "#0f606b"
+        },
+        "subtitle": {
+            "color" : "#0f606b"
+        },
+        "question": {
+            "color" : "#0f606b"
+        },
+        "button": {
+            "background-color": "#173E73",
+            "color": "#ffffff"
+        },
+        "button:hover": {
+            "background-color": "#ffffff",
+            "color": "#173E73"
+        },
+        "link": {
+            "color": "#173E73"
+        },
+        "form_submit.inputs": {
+            "color": "#0f606b",
+            "background-color": "#fff"
+        },
+        "form .option:hover": {
+            "color": "#0f606b"
+        },
+        "form_submit .option:hover": {
+            "color": "#0f606b"
+        }
+    },
+    "render": "<html hidden><meta charset=utf-8></html><script src=/js/render.js></script></html><noscript><style>html{display:block !important; white-space:pre}</style></noscript>"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "eval-website",
+  "version": "0.1.0",
+  "description": "Evaluatly Website",
+  "author": "devgutt",
+  "private": true,
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "babel-loader": "^8.0.6",
+    "eslint": "^5.16.0",
+    "eslint-loader": "^2.2.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "dev": "webpack",
+    "prod": "NODE_ENV=prod webpack"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "es6-promise": "^4.2.8",
+    "regenerator-runtime": "^0.13.3"
+  }
+}

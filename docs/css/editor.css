@@ -1,0 +1,261 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    background-color: #e8e8e8;
+}
+body > #msg {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+        sans-serif;
+    font-size: 18px;
+    color: #1a202c;
+    font-weight: 400;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 24px;
+    z-index: 1000;
+}
+body > #msg a {
+    color: #3c4fe0;
+    text-decoration: none;
+}
+body > #msg > div {
+    display: inline-block;
+    position: relative;
+    padding: 16px 32px;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0rem 0.5rem 1.5rem -0.5rem #4a4a4a;
+    transition: all 400ms;
+}
+body > #msg.error > div {
+    background-color: #b00020;
+    color: #fff;
+}
+body > #msg.warning > div {
+    background-color: #ffdd57;
+    color: rgba(0, 0, 0, 0.7);
+}
+body > #msg.info > div {
+    background-color: #3298dc;
+    color: #fff;
+}
+body > #msg.success > div {
+    background-color: #48c774;
+    color: #fff;
+}
+body > #container {
+    height: 100%;
+    position: relative;
+    transition: opacity 400ms;
+}
+body > #container > #main {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+        sans-serif;
+    font-size: 18px;
+    color: #1a202c;
+    font-weight: 400;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+body > #container > #main a {
+    color: #3c4fe0;
+    text-decoration: none;
+}
+body > #container > #main header {
+    border-bottom: 1px solid #d6d5d5;
+    flex: 0 0 50px;
+    overflow: hidden;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+body > #container > #main header a.back {
+    flex: 0 0 auto;
+    display: flex;
+    padding: 12px;
+}
+body > #container > #main header a.back svg {
+    width: 24px;
+    height: 24px;
+    fill: inherit;
+}
+body > #container > #main header .title {
+    flex: 1 1 auto;
+    font-weight: 700;
+    padding: 0 8px;
+}
+body > #container > #main header .toolbar {
+    flex: 0 0 auto;
+}
+body > #container > #main header .toolbar #btnDocs {
+    font-size: 0.95rem;
+    padding: 0 8px;
+    margin-right: 8px;
+}
+body > #container > #main header .toolbar #linkDownload {
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 8px 24px;
+    border: 0;
+    border-color: inherit;
+    border-radius: 3px;
+    color: #c3c3c3;
+    background-color: #e2e2e2;
+    transition-duration: 200ms;
+    margin: 0 8px;
+    outline: 0;
+    background-color: green;
+    color: #fff;
+}
+body > #container > #main header .toolbar #linkDownload:hover {
+    background-color: #429642;
+}
+body > #container > #main #editor {
+    flex: 1 1 0;
+    position: relative;
+}
+@media (min-width: 684px) {
+    body > #container > #main {
+        display: flex !important;
+    }
+}
+@media (max-width: 684px) {
+    body > #container > #main {
+        right: 0;
+        bottom: 50px;
+    }
+    body > #container > #main #btnDocs {
+        display: none;
+    }
+}
+body > #container > #preview {
+    flex: 1 1 0;
+    overflow: scroll;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+}
+@media (min-width: 684px) {
+    body > #container > #preview {
+        display: block !important;
+    }
+}
+@media (max-width: 684px) {
+    body > #container > #preview {
+        left: 0;
+        bottom: 50px;
+        display: none;
+    }
+}
+body > #container > #docs {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+        sans-serif;
+    font-size: 18px;
+    color: #1a202c;
+    font-weight: 400;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    z-index: 100;
+    max-width: 540px;
+    width: calc(50% - 32px);
+    background-color: #e8e8e8;
+    box-shadow: 0 18px 30px -15px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    margin: 16px;
+}
+body > #container > #docs a {
+    color: #3c4fe0;
+    text-decoration: none;
+}
+body > #container > #docs iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 684px) {
+    body > #container > #docs {
+        max-width: 100%;
+        width: 100%;
+        left: 0;
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        bottom: 50px;
+    }
+}
+body > #container > #footer {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+        sans-serif;
+    font-size: 18px;
+    color: #1a202c;
+    font-weight: 400;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    display: none;
+    height: 50px;
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #d6d5d5;
+}
+body > #container > #footer a {
+    color: #3c4fe0;
+    text-decoration: none;
+}
+body > #container > #footer .btns {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+body > #container > #footer .btns button {
+    flex: 1 1 auto;
+    border: 0;
+    outline: 0;
+    margin: 0;
+}
+body > #container > #footer .btns button:hover {
+    background-color: #d6d5d5;
+}
+body > #container > #footer .btns button#ftnPreview {
+    border-left: 1px solid #d6d5d5;
+    border-right: 1px solid #d6d5d5;
+}
+@media (max-width: 684px) {
+    body > #container > #footer {
+        display: block;
+    }
+}

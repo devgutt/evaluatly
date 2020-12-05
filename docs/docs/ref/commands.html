@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/_build/docs.css">
+    <title>Commands - Evaluatly Docs</title>
+</head>
+<body>
+    <div class="root">
+        <div class="main">
+            <div>
+                <div class="menu">
+	<div class="header">
+		<a href="/docs"><img src="https://cdn.evaluatly.com/img/evaluatly-logo-96x46.png"/></a>
+		<div class="middle"><span>Docs</span></div>
+		<div>
+			<a href="#" class="hamburger" id="menu-ham">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<ul class="nav" id="menu-list" style="display: none">
+				<li class="">
+			<a href="/docs">Getting Started</a>
+								</li>
+				<li class="">
+			<a href="/docs/ref">Reference</a>
+									<ul>
+								<li class="">
+					<a href="/docs/ref/root.html">Root</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/story.html">Story</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/page.html">Page</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/items.html">Items</a>
+									</li>
+								<li class="active">
+					<a href="/docs/ref/commands.html">Commands</a>
+											<div class="onpage mob-hide">
+	<ul>
+<li><a href="#programming">Programming</a></li>
+<li><a href="#data">Data</a></li>
+<li><a href="#display">Display</a>   </li>
+<li><a href="#operations">Operations</a></li>
+<li><a href="#logic">Logic</a></li>
+<li><a href="#comparison">Comparison</a></li>
+<li><a href="#nav">Navigation</a></li>
+<li><a href="#embedded">Embedded</a>   </li>
+</ul>
+</div>
+
+			
+	
+									</li>
+								<li class="">
+					<a href="/docs/ref/text.html">Text</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/theme.html">Theme</a>
+									</li>
+								</ul>
+					</li>
+				<li class="">
+			<a href="https://github.com/evaluatly/evaluatly-js">GitHub</a>
+								</li>
+			</ul>
+</div>
+	
+                <div class="content">
+                    <div class="body">
+                        <h1>Commands</h1>
+                                                <div class="topics index">
+                            <h5>Index</h5>
+                            <ul>
+<li><a href="#programming">Programming</a></li>
+<li><a href="#data">Data</a></li>
+<li><a href="#display">Display</a>   </li>
+<li><a href="#operations">Operations</a></li>
+<li><a href="#logic">Logic</a></li>
+<li><a href="#comparison">Comparison</a></li>
+<li><a href="#nav">Navigation</a></li>
+<li><a href="#embedded">Embedded</a>   </li>
+</ul>
+                        </div>
+                            
+                        <h2 class="group"><a href="#programming" id="programming">#</a> Programming</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#if"><code>if</code></a></td>
+<td style="text-align: left;">Conditional execution of commands.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#call"><code>call</code></a></td>
+<td style="text-align: left;">Calls an endpoint to fetch commands to be executed.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#call-js"><code>call-js</code></a></td>
+<td style="text-align: left;">Calls a Javascript function to fetch commands to be executed.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#throw"><code>throw</code></a></td>
+<td style="text-align: left;">Stops the execution of the current list of commands.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#qs"><code>qs</code></a></td>
+<td style="text-align: left;">Gets a query string parameter of the current page location.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#alert"><code>alert</code></a></td>
+<td style="text-align: left;">Shows or hides an alert popup.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#restart"><code>restart</code></a></td>
+<td style="text-align: left;">Clears all data and resets the story to the beginning.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#console"><code>console</code></a></td>
+<td style="text-align: left;">Shows a message in the browser console.</td>
+</tr>
+</tbody>
+</table>
+<h3 class="group"><a href="#if" id="if">#</a> <code>if</code></h3>
+<p>Conditional execution of commands.</p>
+<h4>Argument</h4>
+<p>List of sequential conditions to be tested.</p>
+<h4>Condition Attributes</h4>
+<p><strong><code>cond</code></strong>   </p>
+<p>Function with conditional.</p>
+<p><strong><code>program</code></strong>   </p>
+<p>One or more commands to be executed if the condition is met.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"if": [
+    { 
+        "cond": {"==": [{"v": "result"}, "HIGH"]},
+        "program": { "jump_page": "page_high" }
+    },
+    { 
+        "cond": {"==": [{"v": "result"}, "LOW"]},
+        "program": { "jump_page": "page_low" }
+    },
+    { 
+        "program": { "next_page": true }
+    }
+]}</code></pre>
+<p>Example with multiple conditions and a list of commands:</p>
+<pre><code class="language-JSON">{"if": [
+    { 
+        "cond": {"and": [
+            {"&gt;=": [{"v": "age"}, 30]},
+            {"&lt;=": [{"v": "age"}, 50]},
+            {"==": [{"v": "sex"}, "M"]}
+        ]},
+        "program": [
+            { "save": ["profile", "2"] },
+            { "jump_page": "page_profile_2" }
+        ]
+    }
+]}</code></pre>
+<hr />
+<h3 class="group"><a href="#call" id="call">#</a> <code>call</code></h3>
+<p>Calls an endpoint to fetch commands to be executed.</p>
+<h4>Arguments</h4>
+<p><strong><code>endpoint</code></strong> </p>
+<p>The URL to be called to fetch the commands. The URL can be an absolute or relative path.</p>
+<p><strong><code>data</code></strong> <em>optional</em> </p>
+<p>List of parameters to be sent to the endpoint. It could be a variable key or a key-value parameter.</p>
+<p>For key-value parameters, the value can be a literal or a single command call returning a literal.</p>
+<p>If not informed, all variables that do not start with &quot;_&quot; (underscore) will be sent.</p>
+<p>By default, the <code>value</code> property of the variable is used. If the <code>value</code> is empty, the <code>id</code> or <code>label</code> is used instead.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"call": { "endpoint": "https://example.com/endpoint/msg" } }</code></pre>
+<p>Example with variables and relative URL:</p>
+<pre><code class="language-JSON">{"call": { 
+    "endpoint": "/api/send_email", 
+    "data": [ 
+        "name", 
+        "email",
+        { "result": {"v": "res"} }
+    ]
+}}</code></pre>
+<h4><a href="#call-server" id="call-server"></a> Server processing</h4>
+<p>The instructions below show how to respond to requests initiated by the <code>call</code> command.</p>
+<p><strong> Request </strong></p>
+<p>A <strong><code>POST</code></strong> request will be called on the URL endpoint, using the <code>endpoint</code> attribute.</p>
+<p>The following parameters will be sent in the <strong><code>BODY</code></strong> of the request:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>hash</code></td>
+<td style="text-align: left;">the root attribute <a href="/docs/ref/root.html"><code>hash</code></a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>origin</code></td>
+<td style="text-align: left;">The protocol, hostname, and port number of the caller's URL.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>data</code></td>
+<td style="text-align: left;">JSON with the parameters specified in the <strong><code>data</code></strong> attribute.</td>
+</tr>
+</tbody>
+</table>
+<p><strong> Response </strong></p>
+<p>The server must respond with a JSON message containing the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ok</code></td>
+<td style="text-align: left;"><code>true</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>res</code></td>
+<td style="text-align: left;">List of <a href="/docs/ref/commands.html">commands</a> to be executed.</td>
+</tr>
+</tbody>
+</table>
+<p>if an <strong>error</strong> occurs:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ok</code></td>
+<td style="text-align: left;"><code>false</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>error_msg</code></td>
+<td style="text-align: left;">The error message to be shown to the user.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>error_code</code></td>
+<td style="text-align: left;">The error code.</td>
+</tr>
+</tbody>
+</table>
+<p>Example of response:</p>
+<pre><code class="language-JSON">{   
+    "ok": true,
+    "res": [
+        {"save":["token", "123"]},
+        {"next_page":true}
+    ]
+}</code></pre>
+<p>An error response:</p>
+<pre><code class="language-JSON">{   
+    "ok": false,
+    "error_msg": "Invalid request",
+    "error_code": "ERROR_INVALID_REQUEST"
+}</code></pre>
+<hr />
+<h3 class="group"><a href="#call-js" id="call-js">#</a> <code>call-js</code></h3>
+<p>Calls a Javascript function to fetch commands to be executed.</p>
+<p>UNDER CONSTRUCTION</p>
+<hr />
+<h3 class="group"><a href="#throw" id="throw">#</a> <code>throw</code></h3>
+<p>Stops the execution of the current list of commands.</p>
+<h4>Argument</h4>
+<p>The message shown to the user.</p>
+<h4>Example</h4>
+<pre><code class="language-JSON">{"throw": "Error found"}</code></pre>
+<hr />
+<h3 class="group"><a href="#qs" id="qs">#</a> <code>qs</code></h3>
+<p>Gets a query string parameter of the current page location.</p>
+<h4>Argument</h4>
+<p>Parameter name in the location query string.</p>
+<h4>Return</h4>
+<p>The value associated with the parameter.</p>
+<h4>Example</h4>
+<p>To get the parameter <code>sid</code>, considering the current location <code>https://p.evaluatly.com/acc/tst?sid=234</code>:</p>
+<pre><code class="language-JSON">{"qs": "sid"}</code></pre>
+<hr />
+<h3 class="group"><a href="#alert" id="alert">#</a> <code>alert</code></h3>
+<p>Shows or hides an alert popup.</p>
+<h4>Argument</h4>
+<p><strong><code>is</code></strong>   </p>
+<p>The alert type.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Values</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>error</code></td>
+<td style="text-align: left;">Shows an error alert popup (default)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>warning</code></td>
+<td style="text-align: left;">Shows a warning alert popup</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>info</code></td>
+<td style="text-align: left;">Shows an information alert popup</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>success</code></td>
+<td style="text-align: left;">Shows a success alert popup</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>msg</code></strong> </p>
+<p>Message to be displayed. </p>
+<p>Accepts <a href="/docs/ref/text.html">text formatting and variables</a>.</p>
+<p><strong><code>interval</code></strong>  <em>optional</em></p>
+<p>The period in milliseconds that the alert will be displayed. (1000 milliseconds = 1 second). The default is 3000 milliseconds.</p>
+<p>Use <code>-1</code> to not hide the alert automatically.</p>
+<p><strong><code>style</code></strong> <em>optional</em></p>
+<p>Style to be applied to the alert as CSS key-value pairs. </p>
+<p>The values can be a literal value or a single <a href="/docs/ref/commands.html">command</a> call returning a literal value.</p>
+<h4>Example</h4>
+<pre><code class="language-JSON">{"alert": {"is": "info", "interval": 5000, "msg": "Hello there!"}}</code></pre>
+<hr />
+<h3 class="group"><a href="#restart" id="restart">#</a> <code>restart</code></h3>
+<p>Clears all data and resets the story to the beginning.</p>
+<h4>Argument</h4>
+<p><code>true</code></p>
+<h4>Example</h4>
+<pre><code class="language-JSON">{"restart": true}</code></pre>
+<hr />
+<h3 class="group"><a href="#console" id="console">#</a> <code>console</code></h3>
+<p>Shows a message in the browser console.</p>
+<p>Used for debugging.</p>
+<h4>Argument</h4>
+<p>Expression or list of expressions.</p>
+<p>An expression can be a literal value or a command.</p>
+<p>If a list is used, the values are concatenated before the display.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"console": "Checkpoint 1"}</code></pre>
+<p>Example with a list:</p>
+<pre><code class="language-JSON">{"console": [ "hello ", {"v": "name"} ]}</code></pre>
+<hr />
+<h2 class="group"><a href="#data" id="data">#</a> Data</h2>
+<p>Commands to manipulate variables.</p>
+<p>The variables are saved on a data table for the session, and it is erased when the tab or browser closes.</p>
+<p>Optionally, you can store the variables to be available in the future after the session is closed.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#v"><code>v</code> (<em>value</em>)</a></td>
+<td style="text-align: left;">Gets the <code>value</code> of a variable.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#i"><code>i</code> (<em>id</em>)</a></td>
+<td style="text-align: left;">Gets the <code>id</code> of a variable.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#l"><code>l</code> (<em>label</em>)</a></td>
+<td style="text-align: left;">Gets the <code>label</code> of a variable.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#prop"><code>prop</code></a></td>
+<td style="text-align: left;">Gets the property of a variable.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#save"><code>save</code></a></td>
+<td style="text-align: left;">Saves a variable in the data table.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#delete"><code>delete</code></a></td>
+<td style="text-align: left;">Deletes a variable in the data table.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#store"><code>store</code></a></td>
+<td style="text-align: left;">Stores a list of variables on the local storage.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#restore"><code>restore</code></a></td>
+<td style="text-align: left;">Restores a list of variables from the local storage.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#remove"><code>remove</code></a></td>
+<td style="text-align: left;">Removes variables from the local storage.</td>
+</tr>
+</tbody>
+</table>
+<h3 class="group"><a href="#v" id="v">#</a> <code>v</code></h3>
+<p>Gets the <code>value</code> of a variable.</p>
+<h4>Argument</h4>
+<p>Variable name.</p>
+<h4>Return</h4>
+<p>Value of the variable.</p>
+<h4>Example</h4>
+<pre><code class="language-JSON">{"v": "name"}</code></pre>
+<hr />
+<h3 class="group"><a href="#i" id="i">#</a> <code>i</code></h3>
+<p>Gets the <code>id</code> of a variable.</p>
+<h4>Argument</h4>
+<p>Variable name.</p>
+<h4>Return</h4>
+<p>Id of the variable.</p>
+<h4>Example</h4>
+<pre><code class="language-JSON">{"i": "check_1"}</code></pre>
+<hr />
+<h3 class="group"><a href="#l" id="l">#</a> <code>l</code></h3>
+<p>Gets the <code>label</code> of a variable.</p>
+<h4>Argument</h4>
+<p>Variable name.</p>
+<h4>Return</h4>
+<p>The label of the variable.</p>
+<h4>Example</h4>
+<pre><code class="language-JSON">{"l": "radio_1"}</code></pre>
+<hr />
+<h3 class="group"><a href="#prop" id="prop">#</a> <code>prop</code></h3>
+<p>Gets the property of a variable.</p>
+<h4>Argument</h4>
+<p>[key, prop]</p>
+<p><strong>key</strong>  </p>
+<p>Key of the variable.</p>
+<p><strong>prop</strong> property</p>
+<p>The name of the property.</p>
+<h4>Return</h4>
+<p>The label of the variable.</p>
+<h4>Example</h4>
+<pre><code class="language-JSON">{"prop": ["radio_1", "label"]}</code></pre>
+<hr />
+<h3 class="group"><a href="#save" id="save">#</a> <code>save</code></h3>
+<p>Saves a variable in the data table.</p>
+<p>The variable will be created if it does not exist. If it already exists, the value will be replaced by the new one.</p>
+<h4>Argument</h4>
+<p>[key, prop, value]</p>
+<p><strong>key</strong>  </p>
+<p>Key of the variable.</p>
+<p><strong>prop</strong> <em>optional</em></p>
+<p>The name of the property. Defaults to <code>value</code>.</p>
+<p><strong>value</strong> </p>
+<p>A literal value or single command call returning a literal.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"save": ["score", "value", 60]}</code></pre>
+<p>Example using conditional:</p>
+<pre><code class="language-JSON">{ "if": [
+    { 
+        "cond": {"&lt;=": [{"v": "score"}, 20]},
+        "program": {"save": ["result", "value", "LOW"]}
+    },
+    { 
+        "cond": {"&gt;=": [{"v": "score"}, 80]},
+        "program": {"save": ["result", "value", "HIGH"]}
+    },
+    { 
+        "program": {"save": ["result", "value", "NORMAL"]}
+    }
+] }</code></pre>
+<p>Example using command call:</p>
+<pre><code class="language-JSON">{"save": ["sum", {"+": [23, 12, 45]}]}</code></pre>
+<hr />
+<h3 class="group"><a href="#delete" id="delete">#</a> <code>delete</code></h3>
+<p>Deletes a variable in the data table.</p>
+<h4>Argument</h4>
+<p><strong>key</strong>  </p>
+<p>Key of the variable.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"delete": "score"}</code></pre>
+<hr />
+<h3 class="group"><a href="#store" id="store">#</a> <code>store</code></h3>
+<p>Stores a list of variables from the data table to the local storage.</p>
+<h4>Argument</h4>
+<p>List of variables.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"store": ["name", "email"]}</code></pre>
+<hr />
+<h3 class="group"><a href="#restore" id="restore">#</a> <code>restore</code></h3>
+<p>Restores a list of variables from the local storage to the data table.</p>
+<h4>Argument</h4>
+<p>List of variables.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"restore": ["name", "email"]}</code></pre>
+<hr />
+<h3 class="group"><a href="#remove" id="remove">#</a> <code>remove</code></h3>
+<p>Removes variables from the local storage.</p>
+<h4>Argument</h4>
+<p>List of variables, or <strong><code>all</code></strong> to delete all variables of the local storage.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"remove": ["name", "email"]}</code></pre>
+<p>Delete all variables on the local storage:</p>
+<pre><code class="language-JSON">{"remove": "all"}</code></pre>
+<hr />
+<h2 class="group"><a href="#display" id="display">#</a> Display</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#sub"><code>sub</code></a></td>
+<td style="text-align: left;">Applies <a href="/docs/ref/text.html">text formatting and variables</a> to a text.</td>
+</tr>
+</tbody>
+</table>
+<h3 class="group"><a href="#sub" id="sub">#</a> <code>sub</code></h3>
+<p>Applies <a href="/docs/ref/text.html">text formatting and variables</a> to a text.</p>
+<h4>Argument</h4>
+<p>Text to process the substitutions.</p>
+<h4>Return</h4>
+<p>The text processed.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"sub": "The color is {{color|upper}}"}</code></pre>
+<hr />
+<h2 class="group"><a href="#operations" id="operations">#</a> Operations</h2>
+<p>Applies the operator to a list of values.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operation</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>+</code></td>
+<td style="text-align: left;">Sums or concatenate the values</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>-</code></td>
+<td style="text-align: left;">Subtracts the values</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>*</code></td>
+<td style="text-align: left;">Multiply the values</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>/</code></td>
+<td style="text-align: left;">Divides the values</td>
+</tr>
+</tbody>
+</table>
+<h4>Argument</h4>
+<p>List of values to perform the operation desired.</p>
+<p>The values can be a literal or a single command call returning a literal.</p>
+<p>The operation is executed sequentially from left to right.</p>
+<h4>Return</h4>
+<p>The result of the operation.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"+": [43, 12, 2]}</code></pre>
+<p>Example using command call:</p>
+<pre><code class="language-JSON">{"+": [43, 12, {"v": "result"}]}</code></pre>
+<p>Example concatenating text:</p>
+<pre><code class="language-JSON">{"+": ["Your name is ", {"v": "name"}]}</code></pre>
+<blockquote>
+<p>You can use <a href="/docs/ref/text.html">text formatting and variables</a> for this type of operation.</p>
+</blockquote>
+<p>Example with multiple operations:</p>
+<pre><code class="language-JSON">{"*": [ {"+": [ {"v": "X"}, {"v": "Y"} ]}, 100 ]}</code></pre>
+<hr />
+<h2 class="group"><a href="#logic" id="logic">#</a> Logic</h2>
+<p>Boolean operations.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>and</code></td>
+<td style="text-align: left;">Boolean &quot;and&quot; operation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>or</code></td>
+<td style="text-align: left;">Boolean &quot;or&quot; operation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>not</code></td>
+<td style="text-align: left;">Inverts the boolean value</td>
+</tr>
+</tbody>
+</table>
+<h4>Argument</h4>
+<p>For <code>and</code> and <code>or</code> operations: List of values to perform the operation desired.</p>
+<p>For <code>not</code> operation: Value to be inverted.</p>
+<p>The values can be a literal or a single command call returning a literal.</p>
+<h4>Return</h4>
+<p>Result of the operation: <code>true</code> or <code>false</code>.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"and": [ {"v": "isFirst"}, true ]}</code></pre>
+<p>Example with inversion:</p>
+<pre><code class="language-JSON">{"not": {"v": "isFirst"}}</code></pre>
+<p>Example with complex operations:</p>
+<pre><code class="language-JSON">{"and": [
+        {"&lt;": [{"v": "result"}, "100"]},
+        {"&gt;": [{"v": "result"}, "30"]},
+        {"!=": [{"v": "result"}, "70"]}
+    ]
+}</code></pre>
+<hr />
+<h2 class="group"><a href="#comparison" id="comparison">#</a> Comparison</h2>
+<p>Compares two values.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>==</code></td>
+<td style="text-align: left;">Equal</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>!=</code></td>
+<td style="text-align: left;">Not equal</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&gt;</code></td>
+<td style="text-align: left;">Greater than</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&gt;=</code></td>
+<td style="text-align: left;">Greater than or equal to</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;</code></td>
+<td style="text-align: left;">Less than</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;=</code></td>
+<td style="text-align: left;">Less than or equal to</td>
+</tr>
+</tbody>
+</table>
+<h4>Argument</h4>
+<p>A comparison pair: [value1, value2].</p>
+<p>The values can be a literal or a single command call returning a literal.</p>
+<h4>Return</h4>
+<p>Result of the operation: <code>true</code> or <code>false</code>.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"==": [{"v": "result"}, 70]}</code></pre>
+<pre><code class="language-JSON">{"&gt;": [{"v": "result"}, 70]}</code></pre>
+<hr />
+<h2 class="group"><a href="#nav" id="nav">#</a> Navigation</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#next_page"><code>next_page</code></a></td>
+<td style="text-align: left;">Navigates to the next page in the story.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#previous_page"><code>previous_page</code></a></td>
+<td style="text-align: left;">Navigates to the previous page in the story.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#reload_page"><code>reload_page</code></a></td>
+<td style="text-align: left;">Reloads the current page in the story.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#jump_page"><code>jump_page</code></a></td>
+<td style="text-align: left;">Jumps to a page with a given id.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#redirect"><code>redirect</code></a></td>
+<td style="text-align: left;">Redirects to a URL.</td>
+</tr>
+</tbody>
+</table>
+<h3 class="group"><a href="#next_page" id="next_page">#</a> <code>next_page</code></h3>
+<p>Navigates to the next page in the story.</p>
+<h4>Argument</h4>
+<p><code>true</code></p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"next_page": true}</code></pre>
+<hr />
+<h3 class="group"><a href="#previous_page" id="previous_page">#</a> <code>previous_page</code></h3>
+<p>Navigates to the previous page in the story.</p>
+<h4>Argument</h4>
+<p><code>true</code></p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"previous_page": true}</code></pre>
+<hr />
+<h3 class="group"><a href="#reload_page" id="reload_page">#</a> <code>reload_page</code></h3>
+<p>Reloads the current page in the story.</p>
+<h4>Argument</h4>
+<p><code>true</code></p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"reload_page": true}</code></pre>
+<hr />
+<h3 class="group"><a href="#jump_page" id="jump_page">#</a> <code>jump_page</code></h3>
+<p>Jumps to a page with a given id.</p>
+<h4>Argument</h4>
+<p>The id of the destination page.</p>
+<p>The values can be a literal or a single command call returning a literal.</p>
+<blockquote>
+<p>Go to <a href="/docs/ref/story.html">Story</a> for more information about pages.</p>
+</blockquote>
+<p>The values can be a literal or a single command call returning a literal.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"jump_page": "page_result"}</code></pre>
+<p>Example using command:</p>
+<pre><code class="language-JSON">{"jump_page": {"v": "savedPageId"}}</code></pre>
+<p>Example using conditional jumping:</p>
+<pre><code class="language-JSON">{"if": [
+    {
+        "cond": {"&gt;=": [{"v": "result"}, 80]},
+        "program": {"jump_page": "page_high"}
+    },
+    {
+        "cond": {"&lt;=": [{"v": "result"}, 20]},
+        "program": {"jump_page": "page_low"}
+    },
+    {
+        "program": {"jump_page": "page_normal"}
+    }
+]}</code></pre>
+<hr />
+<h3 class="group"><a href="#redirect" id="redirect">#</a> <code>redirect</code></h3>
+<p>Redirects to a URL.</p>
+<p>If the story is embedded, the parent will be redirected.</p>
+<h4>Arguments</h4>
+<p><strong><code>url</code></strong>   </p>
+<p>The URL for redirection.</p>
+<p>The URL can be a literal or a single command call returning a literal.</p>
+<p><strong><code>data</code></strong>   </p>
+<p>List of parameters to be submitted to the URL. It could be the name of a variable or a key-value parameter.</p>
+<p>By default, the <code>value</code> property of the variable is used. If the value is empty, the <code>id</code> is used instead.</p>
+<p>For key-value parameters, the value can be a literal or a single command call returning a literal.</p>
+<p><strong><code>method</code></strong>   </p>
+<p>The method for redirection.</p>
+<p>Values: <code>get</code> (default) or <code>post</code>.</p>
+<h4>Examples</h4>
+<p>Example of <code>get</code> redirection:</p>
+<pre><code class="language-JSON">{"redirect": { 
+    "data": ["name", "email"], 
+    "url": "https://mywebsite.com/show" 
+    } 
+}</code></pre>
+<p>Example of <code>post</code> redirection:</p>
+<pre><code class="language-JSON">{"redirect": { 
+    "method": "post",
+    "data": [ 
+        "name", "email", 
+        {
+            "result": {"v": "result"},
+            "token": "123"
+        } 
+    ],
+    "url": "https://mywebsite.com/result"
+    }
+}</code></pre>
+<hr />
+<h2 class="group"><a href="#embedded" id="embedded">#</a> Embedded</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#parent"><code>parent</code></a></td>
+<td style="text-align: left;">Communicates with the parent window.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#has_parent"><code>has_parent</code></a></td>
+<td style="text-align: left;">Indicates whether the story is embedded.</td>
+</tr>
+</tbody>
+</table>
+<h3 class="group"><a href="#parent" id="parent">#</a> <code>parent</code></h3>
+<p>Communicates with the parent window.</p>
+<p>This command only works for embedded stories.</p>
+<h4>Close the embedded window</h4>
+<h5>Argument</h5>
+<p><strong><code>action</code></strong></p>
+<p><code>close</code></p>
+<h5>Example</h5>
+<pre><code class="language-JSON">{"parent": { "action": "close" }}</code></pre>
+<h4>Sends a message to the parent window</h4>
+<h5>Arguments</h5>
+<p><strong><code>action</code></strong></p>
+<p><code>message</code></p>
+<p><strong><code>data</code></strong>   </p>
+<p>List of parameters to be sent with the message. It could be the name of a variable or a key-value parameter.</p>
+<p>By default, the <code>value</code> property of the variable is used. If the value is empty, the <code>id</code> is used instead.</p>
+<p>For key-value parameters, the value can be a literal or a single command call returning a literal.</p>
+<h5>Example</h5>
+<pre><code class="language-JSON">{"parent": {
+    "action": "message",
+    "data": [
+        "name", 
+        "email", 
+        {"extra": "SOURCE"}
+        ]
+    }
+}</code></pre>
+<hr />
+<h3 class="group"><a href="#has_parent" id="has_parent">#</a> <code>has_parent</code></h3>
+<p>It indicates whether the story is embedded.</p>
+<h4>Argument</h4>
+<p>Boolean to be matched with the response.</p>
+<h4>Return</h4>
+<p><code>true</code> if it matches the argument or <code>false</code> otherwise.</p>
+<h4>Example</h4>
+<pre><code class="language-JSON">{"has_parent": true}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="/_build/docs.js"></script>
+    <script src="https://cdn.evaluatly.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

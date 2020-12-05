@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/_build/docs.css">
+    <title>Story - Evaluatly Docs</title>
+</head>
+<body>
+    <div class="root">
+        <div class="main">
+            <div>
+                <div class="menu">
+	<div class="header">
+		<a href="/docs"><img src="https://cdn.evaluatly.com/img/evaluatly-logo-96x46.png"/></a>
+		<div class="middle"><span>Docs</span></div>
+		<div>
+			<a href="#" class="hamburger" id="menu-ham">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<ul class="nav" id="menu-list" style="display: none">
+				<li class="">
+			<a href="/docs">Getting Started</a>
+								</li>
+				<li class="">
+			<a href="/docs/ref">Reference</a>
+									<ul>
+								<li class="">
+					<a href="/docs/ref/root.html">Root</a>
+									</li>
+								<li class="active">
+					<a href="/docs/ref/story.html">Story</a>
+											<div class="onpage mob-hide">
+	
+</div>
+
+			
+	
+									</li>
+								<li class="">
+					<a href="/docs/ref/page.html">Page</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/items.html">Items</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/commands.html">Commands</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/text.html">Text</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/theme.html">Theme</a>
+									</li>
+								</ul>
+					</li>
+				<li class="">
+			<a href="https://github.com/evaluatly/evaluatly-js">GitHub</a>
+								</li>
+			</ul>
+</div>
+	
+                <div class="content">
+                    <div class="body">
+                        <h1>Story</h1>
+                            
+                        <p>Story element that contains a set of <a href="/docs/ref/page.html">pages</a>.</p>
+<h3>Attributes</h3>
+<h4><code>info</code></h4>
+<p>Information attributes:</p>
+<p><strong><code>id</code></strong>  <em>optional</em></p>
+<p>Story Id.</p>
+<p><strong><code>title</code></strong>  <em>optional</em> </p>
+<p>Story title.</p>
+<p><strong><code>lang</code></strong>  <em>optional</em>   </p>
+<p>Language code of the story.</p>
+<h4><code>env</code></h4>
+<p>Environment attributes:</p>
+<p><strong><code>back_label</code></strong>  <em>optional</em>   </p>
+<p>The label of the back button.</p>
+<h4><code>brand</code> <em>optional</em></h4>
+<p>Brand attributes:</p>
+<p><strong><code>show</code></strong>  </p>
+<p>Show or hide the brand. The default is <code>true</code>.</p>
+<p><strong><code>txt</code></strong>  </p>
+<p>Text of the brand. Defaults to Evaluatly's brand.</p>
+<p>Accepts <a href="/docs/ref/text.html">text formatting and variables</a>.</p>
+<h4><code>logo</code> <em>optional</em></h4>
+<p>Logo attributes:</p>
+<p><strong><code>img</code></strong>  </p>
+<p>The URL of the logo image.</p>
+<p>Images can be of the type JPEG, GIF, PNG, SVG, ICO, and BMP.</p>
+<p><strong><code>program</code></strong>  <em>optional</em></p>
+<p>One or more <a href="/docs/ref/commands.html">commands</a> to be executed when the logo is clicked.</p>
+<p><strong><code>width</code></strong> <em>optional</em></p>
+<p>Width of the logo.</p>
+<p><strong><code>height</code></strong> <em>optional</em></p>
+<p>Height of the image.</p>
+<p><strong><code>alt</code></strong>  <em>optional</em></p>
+<p>Text description of the logo image.</p>
+<p><strong><code>style</code></strong> <em>optional</em></p>
+<p>Style to be applied to the logo as CSS key-value pairs. </p>
+<p>The values can be a literal value or a single <a href="/docs/ref/commands.html">command</a> call returning a literal value.</p>
+<blockquote>
+<p>Use the <code>show_logo</code> <a href="/docs/ref/page.html">page attribute</a> to control the display of the logo on a specific page.</p>
+</blockquote>
+<h4><code>progress</code> <em>optional</em></h4>
+<p>Progress bar attributes:</p>
+<p><strong><code>show</code></strong>  </p>
+<p>Indicates whether or not to show the progress bar on the pages. Defaults to <code>false</code>.</p>
+<p><strong><code>qtd</code></strong> <em>optional</em> </p>
+<p>The quantity used to evaluate the progress. Defaults to the number of pages.</p>
+<h4><code>pages</code></h4>
+<p>List of <a href="/docs/ref/page.html">pages</a> of the story.</p>
+<h3>Example</h3>
+<pre><code class="language-JSON">{
+    "info": {
+        "id": "story_1",
+        "title": "The Story",
+        "lang": "en"
+    },
+    "logo": {
+        "img" : "/img/logo.png",
+        "program": {"jump_page": "page_start"},
+        "width": "100px"
+    },
+    "env": {
+        "back_label": "Back"
+    },
+    "pages": [
+        {
+            "page_id": "page_start",
+            "items": [
+                { "type": "title", "value": "The Story" },
+                { "type": "p", "value": "Now this is the story all about how..." },
+                { "type": "button", "label": "Next", "program": {"next_page": true} }
+            ]
+        },
+        {
+            "page_id": "page_end",
+            "items": [
+                { "type": "title", "value": "The end" }
+            ]
+        }
+    ]
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="/_build/docs.js"></script>
+    <script src="https://cdn.evaluatly.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

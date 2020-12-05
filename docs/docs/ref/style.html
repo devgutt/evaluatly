@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/_build/docs.css">
+    <title>Style - Evaluatly Docs</title>
+</head>
+<body>
+    <div class="root">
+        <div class="main">
+            <div>
+                <div class="menu">
+	<div class="header">
+		<a href="/docs"><img src="https://cdn.evaluatly.com/img/evaluatly-logo-96x46.png"/></a>
+		<div class="middle"><span>Docs</span></div>
+		<div>
+			<a href="#" class="hamburger" id="menu-ham">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<ul class="nav" id="menu-list" style="display: none">
+				<li class="">
+			<a href="/docs">Home</a>
+						<hr />
+		</li>
+				<li class="">
+			<a href="/docs/ref">Reference</a>
+							<ul>
+								<li class="">
+					<a href="/docs/ref/root.html">Root</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/story.html">Story</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/page.html">Page</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/items.html">Items</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/commands.html">Commands</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/text.html">Text</a>
+									</li>
+								<li class="active">
+					<a href="/docs/ref/style.html">Style</a>
+											<div class="onpage mob-hide">
+							<ul>
+<li><a href="#text">Text</a> </li>
+<li><a href="#back">Background</a> </li>
+<li><a href="#button">Button</a> </li>
+<li><a href="#forms">Forms</a> </li>
+<li><a href="#examples">Examples</a> </li>
+</ul>
+						</div>
+									</li>
+								</ul>
+						<hr />
+		</li>
+			</ul>
+</div>
+	
+                <div class="content">
+                    <div class="body">
+                        <h1>Style</h1>
+                                                <div class="topics index">
+                            <h5>Index</h5>
+                            <ul>
+<li><a href="#text">Text</a> </li>
+<li><a href="#back">Background</a> </li>
+<li><a href="#button">Button</a> </li>
+<li><a href="#forms">Forms</a> </li>
+<li><a href="#examples">Examples</a> </li>
+</ul>
+                        </div>
+                            
+                        <p>Below are the parameters to customize the style of the story.</p>
+<p>All parameters are optional.</p>
+<h2 class="group"><a href="#text" id="text">#</a> Text</h2>
+<p><strong><code>font_size</code></strong>   </p>
+<p>Reference size of the text.</p>
+<p><strong><code>text_font_color</code></strong>   </p>
+<p>Text color.</p>
+<p><strong><code>font_family</code></strong>   </p>
+<p>Font family. It can be a system font or a <a href="https://fonts.google.com/">Google font</a>.</p>
+<p><strong><code>align</code></strong>   </p>
+<p>Alignment of items.</p>
+<p>Values: <code>left</code> (default), <code>center</code>, or <code>right</code>.</p>
+<p><strong><code>title_font_color</code></strong>   </p>
+<p>Title reference font color.</p>
+<p><strong><code>question_font_color</code></strong>   </p>
+<p>Question reference font color.</p>
+<h2 class="group"><a href="#back" id="back">#</a> Background</h2>
+<p><strong><code>background_color</code></strong>   </p>
+<p>Page background color.</p>
+<p><strong><code>background_img_src</code></strong>   </p>
+<p>URL of an image to be used as background. </p>
+<p>Multiple images and some effects, like gradient, can be used.</p>
+<blockquote>
+<p>This is equivalent to the CSS property <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image"><code>background-image</code></a>.</p>
+</blockquote>
+<p><strong><code>background_img_size</code></strong>   </p>
+<p>Size of the background image.</p>
+<p>Values: <code>cover</code> (default), <code>auto</code>, or <code>contain</code>.</p>
+<blockquote>
+<p>This is equivalent to the CSS property <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size"><code>background-size</code></a>.</p>
+</blockquote>
+<p><strong><code>background_img_repeat</code></strong>   </p>
+<p>The pattern of repetition of the background image.</p>
+<p>Values: <code>no-repeat</code> (default), <code>repeat</code>,  <code>repeat-x</code>, <code>repeat-y</code>, <code>space</code>, or <code>round</code>.</p>
+<blockquote>
+<p>This is equivalent to the CSS property <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat"><code>background-repeat</code></a>.</p>
+</blockquote>
+<p><strong><code>background_img_position</code></strong>   </p>
+<p>Position of the background image.</p>
+<p>Values: <code>center</code> (default), <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>.</p>
+<p>The values can be combined and edge offset added (e.g. <code>bottom 10px right 20px</code>)</p>
+<blockquote>
+<p>This is equivalent to the CSS property <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position"><code>background-position</code></a>.</p>
+</blockquote>
+<p><strong><code>background_color_content</code></strong>   </p>
+<p>Content background color. Defaults to transparent.</p>
+<h2 class="group"><a href="#button" id="button">#</a> Button</h2>
+<p><strong><code>button_bg_color</code></strong>   </p>
+<p>Button reference background color.</p>
+<p><strong><code>button_font_color</code></strong>   </p>
+<p>Button reference font color.</p>
+<p><strong><code>button_border_radius</code></strong>   </p>
+<p>Button reference border-radius.</p>
+<p><strong><code>button_border_width</code></strong>   </p>
+<p>Button reference border width for buttons.</p>
+<h2 class="group"><a href="#forms" id="forms">#</a> Forms</h2>
+<p><strong><code>input_back_color</code></strong>   </p>
+<p>Form input reference background color.</p>
+<p><strong><code>input_font_color</code></strong>   </p>
+<p>Form input reference font color.</p>
+<p><strong><code>input_accent_color</code></strong>   </p>
+<p>Form input reference accent color.</p>
+<p><strong><code>input_error_color</code></strong>   </p>
+<p>Form input error color. </p>
+<h2 class="group"><a href="#examples" id="examples">#</a> Examples</h2>
+<pre><code class="language-JSON">{
+    "font_size": "20px",
+    "text_font_color": "#6c6c6c",
+    "font_family": {"type" : "google", "name" : "Lato"},
+    "align": "center",
+    "title_font_color" : "#000000",
+    "question_font_color" : "#000000",
+    "background_color": "#f5f1ed",
+    "button_bg_color": "#f1574b",
+    "button_font_color": "#ffffff",
+    "button_border_radius" : "100px",
+    "button_border_width" : "3px",
+    "input_accent_color" : "#3e306e"
+}</code></pre>
+<p>Example using a system font:</p>
+<pre><code class="language-JSON">{
+    "font_family": "Arial, Roboto"
+}</code></pre>
+<p>Example with repeating background image:</p>
+<pre><code class="language-JSON">{
+    "background_img_src": "url(https://domain.com/image.png)",
+    "background_img_size": "auto",
+    "background_img_repeat": "repeat",
+    "background_img_position": "0%"
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="/_build/docs.js"></script>
+    <script src="https://cdn.evaluatly.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

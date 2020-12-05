@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/_build/docs.css">
+    <title>Root - Evaluatly Docs</title>
+</head>
+<body>
+    <div class="root">
+        <div class="main">
+            <div>
+                <div class="menu">
+	<div class="header">
+		<a href="/docs"><img src="https://cdn.evaluatly.com/img/evaluatly-logo-96x46.png"/></a>
+		<div class="middle"><span>Docs</span></div>
+		<div>
+			<a href="#" class="hamburger" id="menu-ham">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<ul class="nav" id="menu-list" style="display: none">
+				<li class="">
+			<a href="/docs">Getting Started</a>
+								</li>
+				<li class="">
+			<a href="/docs/ref">Reference</a>
+									<ul>
+								<li class="active">
+					<a href="/docs/ref/root.html">Root</a>
+											<div class="onpage mob-hide">
+	<ul>
+<li><a href="#-init-var-initializing-variables"> {#init-var} Initializing variables</a>
+<ul>
+<li><a href="#example">Example</a></li>
+</ul></li>
+</ul>
+</div>
+
+			
+	
+									</li>
+								<li class="">
+					<a href="/docs/ref/story.html">Story</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/page.html">Page</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/items.html">Items</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/commands.html">Commands</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/text.html">Text</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/theme.html">Theme</a>
+									</li>
+								</ul>
+					</li>
+				<li class="">
+			<a href="https://github.com/evaluatly/evaluatly-js">GitHub</a>
+								</li>
+			</ul>
+</div>
+	
+                <div class="content">
+                    <div class="body">
+                        <h1>Root</h1>
+                                                <div class="topics index">
+                            <h5>Index</h5>
+                            <ul>
+<li><a href="#-init-var-initializing-variables"> {#init-var} Initializing variables</a>
+<ul>
+<li><a href="#example">Example</a></li>
+</ul></li>
+</ul>
+                        </div>
+                            
+                        <p>The root element of a story.</p>
+<h3>Attributes</h3>
+<p><strong><code>hash</code></strong>  </p>
+<p>Unique story identifier.</p>
+<p><strong><code>story</code></strong>   </p>
+<p>The elements of the <a href="/docs/ref/story.html">story</a>.</p>
+<p><strong><code>theme</code></strong>    </p>
+<p>The <a href="/docs/ref/theme.html">style</a> of the story.</p>
+<p><strong><code>data</code></strong> <em>optional</em></p>
+<p>Initial filling of variables. See more in <a href="#init-var">Initializing variables</a> bellow.</p>
+<h3>Example</h3>
+<pre><code class="language-JSON">{
+    "hash": "story_hash",
+    "story": {
+        "info": {
+            "id": "story_1",
+            "title": "The Story"
+        },
+        "pages": [
+            {
+                "page_id": "page_start",
+                "items": [
+                    { "type": "title", "value": "The Story" },
+                    { "type": "p", "value": "Now this is the story all about how..." },
+                    { "type": "button", "label": "Next", "program": {"next_page": true} }
+                ]
+            },
+            {
+                "page_id": "page_end",
+                "items": [
+                    { "type": "title", "value": "The end" }
+                ]
+            }
+        ]
+    },
+     "theme": {
+        "page": {
+            "font-family": "google:Roboto",
+            "font-size": "20px",
+            "background-color": "#f5f1ed"
+        },
+        "content": {
+            "align-items": "center",
+            "text-align": "center",
+            "justify-content": "center"
+        },
+            "button": {
+            "background-color": "#ff5555",
+            "color": "#ffffff"
+        },
+        "button:hover": {
+            "background-color": "#ffeeee",
+            "color": "#ff5555"
+        }
+    }  
+}</code></pre>
+<h2><a href="#init-var" id="init-var"></a> Initializing variables</h2>
+<p>Initial filling of variables, in key-value format. </p>
+<p>If the value entered is a literal, a variable will be created and the <code>value</code> property will be filled with the value.</p>
+<p>If the value entered is a key-value object, the key is the name of the property where the value will be filled.</p>
+<h3>Example</h3>
+<pre><code class="language-JSON">{
+    ...
+    "data": {
+        "name": "Initial name", 
+        "score": {
+            "label": "Score",
+            "value": 42
+        }
+    }
+    ...
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="/_build/docs.js"></script>
+    <script src="https://cdn.evaluatly.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

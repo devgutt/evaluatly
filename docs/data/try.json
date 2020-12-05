@@ -1,0 +1,98 @@
+{
+    "hash": "evaluatly/try",     
+    "story": {
+        "title": "Try Evaluatly",
+        "env": {
+            "back_label" : "Back"
+        },
+        "pages": [
+            {
+                "page_id": "page_start",
+                "items": [
+                    { "type": "title", "value": "Edit me! 👋" },
+                    { "type": "p", "value": "This story was created with some basic elements. You can modify it as you like." },
+                    { "type": "p", "value": "Consult the documentation (**Docs**) for a complete list of elements and commands." },
+                    { "type": "button", "label": "Next", "program": {"next_page": true} }
+                ]
+            },
+             {
+                "items": [
+                    { "type": "question", "value": "What's your name?" },
+                    { "type": "name", "save_key": "name", "required": true, "autofocus": true }
+                ],
+                "submit" : { 
+                    "input_submit": true,
+                    "program": [ {"next_page": true} ] 
+                }  
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "Choose a fruit!"},
+                    { "type": "radio", "save_key": "fruit", 
+                        "options": [
+                            { "id": "apple", "label": "Apple 🍎" },
+                            { "id": "orange", "label": "Orange 🍊" },
+                            { "id": "banana", "label": "Banana 🍌" }
+                        ]
+                    }
+                ],
+                "submit" : { 
+                    "input_submit": true,
+                    "program": {"next_page": true} 
+                }
+            },
+            {
+                "page_id": "page_end",
+                "items": [
+                    { "type": "title", "value": "{{fruit.label}} is awesome, {{name|first}}" },
+                    { "type": "button", "label": "Get Started Free", "program": [
+                        {"redirect": {"url": "/docs"}}
+                    ] 
+                }
+                ]
+            }
+        ]
+    },    
+    "theme": {
+        "page": {
+            "font-family": "google:Merriweather",
+            "font-size": "20px",
+            "background-color": "#F1F9FA"
+        },
+        "content": {
+            "align-items": "center",
+            "text-align": "center",
+            "justify-content": "center"
+        },
+        "title": {
+            "color" : "#0f606b"
+        },
+        "subtitle": {
+            "color" : "#0f606b"
+        },
+        "question": {
+            "color" : "#0f606b"
+        },
+        "button": {
+            "background-color": "#173E73",
+            "color": "#ffffff"
+        },
+        "button:hover": {
+            "background-color": "#ffffff",
+            "color": "#173E73"
+        },
+        "link": {
+            "color": "#173E73"
+        },
+        "form_submit.inputs": {
+            "color": "#0f606b",
+            "background-color": "#fff"
+        },
+        "form .option:hover": {
+            "color": "#0f606b"
+        },
+        "form_submit .option:hover": {
+            "color": "#0f606b"
+        }
+    }  
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/_build/docs.css">
+    <title>Text manipulation - Evaluatly Docs</title>
+</head>
+<body>
+    <div class="root">
+        <div class="main">
+            <div>
+                <div class="menu">
+	<div class="header">
+		<a href="/docs"><img src="https://cdn.evaluatly.com/img/evaluatly-logo-96x46.png"/></a>
+		<div class="middle"><span>Docs</span></div>
+		<div>
+			<a href="#" class="hamburger" id="menu-ham">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<ul class="nav" id="menu-list" style="display: none">
+				<li class="">
+			<a href="/docs">Getting Started</a>
+								</li>
+				<li class="">
+			<a href="/docs/ref">Reference</a>
+									<ul>
+								<li class="">
+					<a href="/docs/ref/root.html">Root</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/story.html">Story</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/page.html">Page</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/items.html">Items</a>
+									</li>
+								<li class="">
+					<a href="/docs/ref/commands.html">Commands</a>
+									</li>
+								<li class="active">
+					<a href="/docs/ref/text.html">Text</a>
+											<div class="onpage mob-hide">
+	<ul>
+<li><a href="#formatting">Formatting</a></li>
+<li><a href="#variables">Variable substitution</a></li>
+<li><a href="#modifiers">Variable modifiers</a></li>
+</ul>
+</div>
+
+			
+	
+									</li>
+								<li class="">
+					<a href="/docs/ref/theme.html">Theme</a>
+									</li>
+								</ul>
+					</li>
+				<li class="">
+			<a href="https://github.com/evaluatly/evaluatly-js">GitHub</a>
+								</li>
+			</ul>
+</div>
+	
+                <div class="content">
+                    <div class="body">
+                        <h1>Text manipulation</h1>
+                                                <div class="topics index">
+                            <h5>Index</h5>
+                            <ul>
+<li><a href="#formatting">Formatting</a></li>
+<li><a href="#variables">Variable substitution</a></li>
+<li><a href="#modifiers">Variable modifiers</a></li>
+</ul>
+                        </div>
+                            
+                        <h2 class="group"><a href="#formatting" id="formatting">#</a> Formatting</h2>
+<p>Applies formatting to parts of the text.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operation</th>
+<th style="text-align: center;">Format</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Bold</strong></td>
+<td style="text-align: center;"><code>**</code><em>text</em><code>**</code> or <code>__</code><em>text</em><code>__</code></td>
+<td style="text-align: left;">Formats the <em>text</em> as boldaface.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Italic</strong></td>
+<td style="text-align: center;"><code>*</code><em>text</em><code>*</code> or <code>_</code><em>text</em><code>_</code></td>
+<td style="text-align: left;">Formats the <em>text</em> as italic type.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Strike</strong></td>
+<td style="text-align: center;"><code>~~</code><em>text</em><code>~~</code></td>
+<td style="text-align: left;">Formats the <em>text</em> as strike-through style.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Line break</strong></td>
+<td style="text-align: center;"><code>\n</code></td>
+<td style="text-align: left;">Creates a line break in the text (carriage-return).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Link</strong></td>
+<td style="text-align: center;"><code>[</code><em>text</em><code>](</code><em>url</em><code>)</code></td>
+<td style="text-align: left;">Creates a <em>link</em> with the label <em>text</em> to <em>url</em>.<br><br>The URL can be a website (<code>http:\\</code> or <code>https:\\</code>), phone (<code>tel:</code>) or email (<code>mailto:</code>). The link will open in another tab or window.</td>
+</tr>
+</tbody>
+</table>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{"type": "p", "value": "This **text is in bold** and this *text is in italics*."}</code></pre>
+<pre><code class="language-JSON">{"type": "p", "value": "Is this ~~the best~~ a good offer?\\n __yes__"}</code></pre>
+<pre><code class="language-JSON">{"type": "p", "value": "Check our [website](https://evaluatly.com)"}</code></pre>
+<p>Example with <a href="#variables">variable substitution</a>:</p>
+<pre><code class="language-JSON">{"type": "p", "value": "The color is **{{color}}**"}</code></pre>
+<blockquote>
+<p>The substitution is applied before any formatting.</p>
+</blockquote>
+<p>Example in <a href="/docs/ref/items.html#check"><code>check</code></a> item option label:</p>
+<pre><code class="language-JSON">{ "type": "check", 
+    "options": [
+        { "save_key": "accept-terms", "label": "I have **read** and **accept** the [terms](https://evaluatly.com/terms)" } 
+    ] 
+}</code></pre>
+<h2 class="group"><a href="#variables" id="variables">#</a> Variable substitution</h2>
+<p>To replace the value of a variable directly in the text, place the variable's name inside the substitution marker <code>{{ }}</code>.</p>
+<p>For example, for a variable named <code>color</code>, you can use the value of the variable in the text using <code>{{color}}</code>.</p>
+<pre><code class="language-JSON">{"type": "p", "value": "The color is {{color}}"}</code></pre>
+<p>By default the property <code>value</code> of the variable is used. To get the other properties, like <code>label</code> or <code>id</code>, use &quot;.&quot; followed by the property name:</p>
+<pre><code class="language-JSON">{"type": "p", "value": "The color's label is {{color.label}} and the id is {{color.id}}"}</code></pre>
+<h2 class="group"><a href="#modifiers" id="modifiers">#</a> Variable modifiers</h2>
+<p>To make changes to the text, use the vertical bar <code>|</code> after the variable, with the desired function.</p>
+<pre><code class="language-JSON">{"type": "p", "value": "The color is {{color|upper}}"}</code></pre>
+<p>The <code>upper</code> function will modify the value of the variable <code>color</code> to uppercase.</p>
+<p>Modifiers can be chained and will be applied in sequence.</p>
+<pre><code class="language-JSON">{"type": "p", "value": "My first name is {{name|first|upper}}"}</code></pre>
+<p>The list of modifiers is below:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Modifier</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#upper"><code>upper</code></a></td>
+<td style="text-align: left;">Transforms the variable to uppercase</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#lower"><code>lower</code></a></td>
+<td style="text-align: left;">Transforms the variable to lowercase</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#sub"><code>sub</code></a></td>
+<td style="text-align: left;">Returns part of the text</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#equal"><code>equal</code></a></td>
+<td style="text-align: left;">Returns text if equal</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#notEqual"><code>notEqual</code></a></td>
+<td style="text-align: left;">Returns text if not equal</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#less"><code>less</code></a></td>
+<td style="text-align: left;">Returns text if the value is less</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#lessEqual"><code>lessEqual</code></a></td>
+<td style="text-align: left;">Returns text if the value is less or equal</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#greater"><code>greater</code></a></td>
+<td style="text-align: left;">Returns text if the value is greater</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#greaterEqual"><code>greaterEqual</code></a></td>
+<td style="text-align: left;">Returns text if the value is greater  or equal</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#default"><code>default</code></a></td>
+<td style="text-align: left;">Returns the default value if the variable is empty.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#first"><code>first</code></a></td>
+<td style="text-align: left;">Returns the first word of a variable.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#last"><code>last</code></a></td>
+<td style="text-align: left;">Returns the last word of a variable.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#word"><code>word</code></a></td>
+<td style="text-align: left;">Returns the word of a variable by position</td>
+</tr>
+</tbody>
+</table>
+<h3 class="group"><a href="#upper" id="upper">#</a> <code>upper</code></h3>
+<p>Transforms the variable to uppercase.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{ "type": "p", "value": "The color is {{color|upper}}" }</code></pre>
+<hr />
+<h3 class="group"><a href="#lower" id="lower">#</a> <code>lower</code></h3>
+<p>Transforms the variable to lowercase.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{ "type": "p", "value": "The color is {{color|lower}}" }</code></pre>
+<hr />
+<h3 class="group"><a href="#sub" id="sub">#</a> <code>sub</code> (<code>start</code>, <code>end</code>)</h3>
+<p>Returns the part of the text between the <code>start</code> and <code>end</code> indexes, or to the end of the text.</p>
+<h4>Parameters</h4>
+<p><code>start</code>  </p>
+<p>Start index (starting with <code>0</code>)</p>
+<p><code>end</code></p>
+<p>End index. If not informed, the end of the text.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{ "type": "p", "value": "The color is {{color|sub(2,5)}}" }</code></pre>
+<p>Example end of the text:</p>
+<pre><code class="language-JSON">{ "type": "p", "value": "The color is {{color|sub(2)}}" }</code></pre>
+<hr />
+<h3 class="group"><a href="#equal" id="equal">#</a> <code>equal</code> (<code>match</code>, <code>txtTrue</code>, <code>txtFalse</code>)</h3>
+<p>Returns <code>txtTrue</code> if variable is equal to <code>match</code>, or <code>txtFalse</code> otherwise.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{ "type": "p", "value": "The color is red? {{color|equal('red', 'Yes', 'No')}}" }</code></pre>
+<hr />
+<h3 class="group"><a href="#notEqual" id="notEqual">#</a> <code>notEqual</code> (<code>match</code>, <code>txtTrue</code>, <code>txtFalse</code>)</h3>
+<p>Returns <code>txtTrue</code> if variable is not equal to <code>match</code>, or <code>txtFalse</code> otherwise.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{ "type": "p", "value": "The color is not red? {{color|notEqual('red', 'Yes', 'No')}}" }</code></pre>
+<hr />
+<h3 class="group"><a href="#less" id="less">#</a> <code>less</code> (<code>var</code>, <code>txtTrue</code>, <code>txtFalse</code>)</h3>
+<p>Returns <code>txtTrue</code> if variable is less than <code>var</code>, or <code>txtFalse</code> otherwise.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{ "type": "p", "value": "The result is {{result|less(20, 'Low', 'High')}}" }</code></pre>
+<hr />
+<h3 class="group"><a href="#lessEqual" id="lessEqual">#</a> <code>lessEqual</code> (<code>var</code>, <code>txtTrue</code>, <code>txtFalse</code>)</h3>
+<p>Returns <code>txtTrue</code> if variable is less or equal to <code>var</code>, or <code>txtFalse</code> otherwise.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{ "type": "p", "value": "The result is {{result|lessEqual(20, 'Low', 'High')}}" }</code></pre>
+<hr />
+<h3 class="group"><a href="#greater" id="greater">#</a> <code>greater</code> (<code>var</code>, <code>txtTrue</code>, <code>txtFalse</code>)</h3>
+<p>Returns <code>txtTrue</code> if variable is greater than <code>var</code>, or <code>txtFalse</code> otherwise.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{ "type": "p", "value": "The result is {{result|greater(20, 'High', 'Low')}}" }</code></pre>
+<hr />
+<h3 class="group"><a href="#greaterEqual" id="greaterEqual">#</a> <code>greaterEqual</code> (<code>var</code>, <code>txtTrue</code>, <code>txtFalse</code>)</h3>
+<p>Returns <code>txtTrue</code> if variable is greater or equal to <code>var</code>, or <code>txtFalse</code> otherwise.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{ "type": "p", "value": "The result is {{result|greaterEqual(20, 'High', 'Low')}}" }</code></pre>
+<hr />
+<h3 class="group"><a href="#default" id="default">#</a> <code>default</code> (<code>txt</code>)</h3>
+<p>Returns <code>txt</code> if the variable is empty.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{ "type": "p", "value": "The color is {{color|default('white')}}" }</code></pre>
+<hr />
+<h3 class="group"><a href="#first" id="first">#</a> <code>first</code></h3>
+<p>Returns the first word of a variable.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{ "type": "p", "value": "The first name is {{name|first}}" }</code></pre>
+<hr />
+<h3 class="group"><a href="#last" id="last">#</a> <code>last</code></h3>
+<p>Returns the last word of a variable.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{ "type": "p", "value": "The last name is {{name|last}}" }</code></pre>
+<hr />
+<h3 class="group"><a href="#word" id="word">#</a> <code>word</code> (<code>nth</code>)</h3>
+<p>Returns <code>nth</code> word of a variable.</p>
+<h4>Examples</h4>
+<pre><code class="language-JSON">{ "type": "p", "value": "The name is {{name|word(1)}}" }</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="/_build/docs.js"></script>
+    <script src="https://cdn.evaluatly.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+
