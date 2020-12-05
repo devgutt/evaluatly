@@ -1,0 +1,23 @@
+<footer id="footer">
+  <div class="lnk">
+    <div class="logo">
+      <div>
+        <a href="/"><img src="{{ data.CONFIG.cdn }}/img/evaluatly-logo-112x57-white.png"/></a>
+      </div>
+    </div>
+    {% for item in data.footer %}
+    <div class="section">
+      <h3>{{ item.title }}</h3>
+      {% for link in item.links %}
+      <div><a href="{{ link.url }}">{{ link.label }}</a></div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+  <div class="cop">
+    <div>
+      <div>© 2020 Evaluatly</div>
+      <div>Created by <a href="https://twitter.com/gpiresnt"><b>@gpiresnt</b></a></div>
+    </div>
+  </div>
+</footer>

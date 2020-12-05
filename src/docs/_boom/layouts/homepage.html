@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/_build/site.css">
+    <title>{{ data.META.title }}</title>
+    {{ include('gtag.html') }}
+  </head>
+  <body>
+
+    {{ include('header.html') }}
+
+    {% if data.hero is defined %}
+    <section id="hero">
+      <div class="content">
+        <div class="info">
+          <div>
+            <h1>{{ data.hero.title }}</h1>
+            <p>{{ data.hero.description|raw }}</p>
+            <div class="action">
+              <a class="demo" href="{{ data.hero.actions.demo.url }}">{{ data.hero.actions.demo.label }}<span>⚡️</span></a>
+              <a class="start" href="{{ data.hero.actions.start.url }}">{{ data.hero.actions.start.label }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+
+    {% if data.features is defined %}
+    <section id="features">
+      {% for key, item in data.features %}
+      <div class="feature {{key}}">
+        <div class="content">
+          <div class="info">
+            <div>
+              <h2>{{ item.title }}</h2>
+              <span class="line"></span>
+              {% for info in item.list %}
+                <p>{{ info }}</p>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="media">
+            <video autoplay="" loop="" muted="true" playsinline="">
+              <source src="{{ data.CONFIG.cdn }}{{ item.media }}" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+      
+    {% if data.code is defined %}
+    <section id="code">
+      <div class="content">
+        <div class="info">
+          <div>
+            <h2>{{ data.code.title }}</h2>
+            <div class="list">
+              {% for info in data.code.list %}
+                <p>{{ info|raw }}</p>
+              {% endfor %}
+            </div>
+            <div class="try">
+              <a href="/try.html?d=/data/try.json">Try it!</a>
+            </div>
+          </div>
+        </div>
+        <div class="media">
+          <div>
+            <img src="{{ data.CONFIG.cdn }}{{ data.code.img }}" />
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endif %}
+    
+    {% if data.free is defined %}
+    {% set p = data.free %}
+    <section id="free">
+      <h2>{{ p.title|raw }}</h2>
+      <p>{{ p.description }}</p>
+      <a href="{{ p.action.url }}" class="btn">{{ p.action.title }}</a>
+    </section>
+    {% endif %} 
+
+    {{ include('footer.html') }}
+
+    <script src="/_build/site.js"></script>
+
+  </body>
+</html>
+
+    

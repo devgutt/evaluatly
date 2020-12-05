@@ -1,0 +1,37 @@
+{% set slug = data.META.slug %}
+<div class="menu">
+	<div class="header">
+		<a href="/docs"><img src="{{ data.CONFIG.cdn }}/img/evaluatly-logo-96x46.png"/></a>
+		<div class="middle"><span>Docs</span></div>
+		<div>
+			<a href="#" class="hamburger" id="menu-ham">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<ul class="nav" id="menu-list" style="display: none">
+		{% for item in data.menu %}
+		<li class="{{ slug == item.slug ? 'active' }}">
+			<a href="{{ item.url }}">{{ item.label }}</a>
+			{% if slug == item.slug %}
+			{{ include('docs/submenu.html') }}
+			{% endif %}
+			{% if item.submenu %}
+			<ul>
+				{% for subitem in item.submenu %}
+				<li class="{{ slug == subitem.slug ? 'active' }}">
+					<a href="{{ subitem.url }}">{{ subitem.label }}</a>
+					{% if slug == subitem.slug %}
+						{{ include('docs/submenu.html') }}
+					{% endif %}
+				</li>
+				{% endfor %}
+				</ul>
+			{% endif %}
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+	

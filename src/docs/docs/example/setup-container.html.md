@@ -1,0 +1,33 @@
+```INI META
+title = Example Getting Started
+base = raw.html
+
+```
+
+```HTML RAW
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Page</title>
+<style>
+    #container {
+        margin: 32px auto;
+        border: 1px solid #d0d0d0;
+        max-width: 600px;
+        box-shadow: 0 18px 30px -15px rgba(0,0,0,.4);
+    }
+</style>
+</head>
+<body>
+    <div id="container"></div>
+    <script src="{% cdn %}/dist/evaluatly-{% evaluatly_version %}.js"></script>
+    <script>
+        Evaluatly.loadUrl('/docs/example/story.json', {
+            "containerId": "container"
+        });
+    </script>
+</body>
+</html>
+```

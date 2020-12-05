@@ -1,0 +1,39 @@
+{
+    "hash": "example/setup-url",     
+    "story": {
+        "pages": [
+            {
+                "items": [
+                    { "type": "title", "value": "My first story" },
+                    { "type": "p", "value": "This is an example." },
+                    { "type": "button", "label": "Next", "program": {"next_page": true} }
+                ]
+            },
+            {
+                "items": [
+                    { "type": "title", "value": "Hello 👋" }
+                ]
+            }
+        ]
+    }, 
+    "theme": {
+        "page": {
+            "font-family": "google:Roboto",
+            "font-size": "20px",
+            "background-color": "#f5f1ed"
+        },
+        "content": {
+            "align-items": "center",
+            "text-align": "center",
+            "justify-content": "center"
+        },
+        "button": {
+            "background-color": "#ff5555",
+            "color": "#ffffff"
+        },
+        "button:hover": {
+            "background-color": "#ffeeee",
+            "color": "#ff5555"
+        }
+    }     
+}

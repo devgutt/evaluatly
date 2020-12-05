@@ -1,0 +1,11 @@
+{
+    "data": {
+        "evaluatly_version": "master",
+        "cdn": "http://cdn.eval.local:8080",
+        "admin": "http://app.eval.local:8080"
+    },
+    "build": {
+        "output": "/Users/gustavopires/var/_eval/code/website"
+    }
+
+}

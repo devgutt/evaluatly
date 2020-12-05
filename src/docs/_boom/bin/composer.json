@@ -1,0 +1,15 @@
+{
+    "name": "boom/boom",
+    "description": "Boom - Static Website Builder",
+    "require": {
+        "twig/twig": "^2.0",
+        "erusev/parsedown": "^1.7",
+        "erusev/parsedown-extra": "^0.8.1"
+    },
+    "authors": [
+        {
+            "name": "Gustavo Pires",
+            "email": "devgutt@gmail.com"
+        }
+    ]
+}

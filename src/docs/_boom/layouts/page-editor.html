@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/_build/editor.css">
+  <title>Try Evaluatly</title>
+</head>
+
+<body>
+  <div id="msg" style="display:none">
+    <div></div>
+  </div>
+  <div id="container" style="visibility:hidden;opacity:0">
+
+    <div id="main">
+      <header>
+        <a id="btnBack" class="back" href="/docs">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21v-2z" /></svg>
+        </a>
+        <div class="title"> <span id="title"></span> </div>
+        <div class="toolbar">
+          <a id="linkDownload" download="evaluatly.json" href="">Download</a>
+          <a id="btnDocs" href="/docs/ref">Docs</a>
+        </div>
+      </header>
+      <div id="editor"></div>
+    </div>
+
+    <div id="preview"></div>
+
+    <div id="docs" style="display:none;">
+      <iframe src="/docs/ref"></iframe>
+    </div>
+
+    <footer id="footer">
+      <div class="btns">
+        <button id="ftnCode">Code</button>
+        <button id="ftnPreview">Preview</button>
+        <button id="ftnDocs">Docs</button>
+      </div>
+    </footer>
+
+  </div>
+  <script src="{{ data.CONFIG.cdn }}/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="{{ data.CONFIG.cdn }}/dist/evaluatly-{{ data.CONFIG.evaluatly_version }}.js"></script>
+  <script src="/_build/editor.js"></script>
+</body>
+
+</html>
