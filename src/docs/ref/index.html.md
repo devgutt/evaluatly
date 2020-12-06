@@ -19,6 +19,6 @@ slug = ref
 
 ### [Text](/docs/ref/text.html)
 
-### [Style](/docs/ref/style.html)
+### [Theme](/docs/ref/theme.html)
 
 ```
