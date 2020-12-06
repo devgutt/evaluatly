@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://evaluatly.com/css/docs.css">
+    <link rel="stylesheet" href="/css/docs.css">
     <title>Getting Started - Evaluatly Docs</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
             <div>
                 <div class="menu">
 	<div class="header">
-		<a href="/docs"><img src="https://evaluatly.com/static/img/evaluatly-logo-96x46.png"/></a>
+		<a href="/docs"><img src="/static/img/evaluatly-logo-96x46.png"/></a>
 		<div class="middle"><span>Docs</span></div>
 		<div>
 			<a href="#" class="hamburger" id="menu-ham">
@@ -26,7 +26,13 @@
 				<li class="active">
 			<a href="/docs">Getting Started</a>
 						<div class="onpage mob-hide">
-	
+	<ul>
+<li><a href="#setup">Creating a story</a></li>
+<li><a href="#form">Adding a simple form</a></li>
+<li><a href="#msg">Sending a message</a></li>
+<li><a href="#try">Try it</a></li>
+<li><a href="#downloads">Downloads</a></li>
+</ul>
 </div>
 
 			
@@ -67,16 +73,306 @@
                 <div class="content">
                     <div class="body">
                         <h1>Getting Started</h1>
+                                                <div class="topics index">
+                            <h5>Index</h5>
+                            <ul>
+<li><a href="#setup">Creating a story</a></li>
+<li><a href="#form">Adding a simple form</a></li>
+<li><a href="#msg">Sending a message</a></li>
+<li><a href="#try">Try it</a></li>
+<li><a href="#downloads">Downloads</a></li>
+</ul>
+                        </div>
                             
-                        
+                        <p>Evaluatly is a tool to create multipage stories. You can use it to show information, collect data with forms, personalize iterations, and much more.</p>
+<h2 class="group"><a href="#setup" id="setup">#</a> Creating a story</h2>
+<p>Stories are created using <a href="https://www.json.org">JSON</a>, a text-based simple data format, and placed directly on a website's page.</p>
+<p>Below is a simple example of a story on a regular web page:</p>
+<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+&lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script src="https://evaluatly.com/dist/evaluatly-1.0.1.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        Evaluatly.loadVar({
+            "hash": "example/setup",     
+            "story": {
+                "pages": [
+                    {
+                        "items": [
+                            { "type": "title", "value": "My first story" },
+                            { "type": "p", "value": "This is an example." },
+                            { "type": "button", "label": "Next", "program": {"next_page": true} }
+                        ]
+                    },
+                    {
+                        "items": [
+                            { "type": "title", "value": "Hello 👋" }
+                        ]
+                    }
+                ]
+            }, 
+            "theme": {
+                "page": {
+                    "font-family": "google:Roboto",
+                    "font-size": "20px",
+                    "background-color": "#f5f1ed"
+                },
+                "content": {
+                    "align-items": "center",
+                    "text-align": "center",
+                    "justify-content": "center"
+                },
+                 "button": {
+                    "background-color": "#ff5555",
+                    "color": "#ffffff"
+                },
+                "button:hover": {
+                    "background-color": "#ffeeee",
+                    "color": "#ff5555"
+                }
+            }     
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>⚡️ <a href="/docs/example/setup.html">Run this example</a></p>
+<p>As you can see, the installation is very simple. <a href="#downloads">Get the Evaluatly script</a> and create a <code>SCRIPT</code> tag on the page. Call <code>Evaluatly.loadVar</code> with your JSON story.</p>
+<h4>Load the story from a JSON file</h4>
+<p>You can also load your story from a JSON file, using <code>Evaluatly.loadUrl</code>. First, create the file with the JSON only:</p>
+<p><code>story.json</code></p>
+<pre><code class="language-JSON">{
+    "hash": "example/setup-url",     
+    "story": {
+        "pages": [
+            {
+                "items": [
+                    { "type": "title", "value": "My first story" },
+                    { "type": "p", "value": "This is an example." },
+                    { "type": "button", "label": "Next", "program": {"next_page": true} }
+                ]
+            },
+            {
+                "items": [
+                    { "type": "title", "value": "Hello 👋" }
+                ]
+            }
+        ]
+    }, 
+    "theme": {
+        "page": {
+            "font-family": "google:Roboto",
+            "font-size": "20px",
+            "background-color": "#f5f1ed"
+        },
+        "content": {
+            "align-items": "center",
+            "text-align": "center",
+            "justify-content": "center"
+        },
+        "button": {
+            "background-color": "#ff5555",
+            "color": "#ffffff"
+        },
+        "button:hover": {
+            "background-color": "#ffeeee",
+            "color": "#ff5555"
+        }
+    }     
+}</code></pre>
+<p>And then, call <code>Evaluatly.loadUrl</code>, informing the URL of the JSON file you have just created:</p>
+<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+&lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script src="https://evaluatly.com/dist/evaluatly-1.0.1.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        Evaluatly.loadUrl('/docs/example/story.json');
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>⚡️ <a href="/docs/example/setup-url.html">Run this example</a></p>
+<h4>Load the story inside a container on the page</h4>
+<p>By default, the story will be shown full screen on the page. If you want to place the story on a container inside the page, you can use the <code>containerId</code> parameter:</p>
+<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+&lt;title&gt;My Page&lt;/title&gt;
+&lt;style&gt;
+    #container {
+        margin: 32px auto;
+        border: 1px solid #d0d0d0;
+        max-width: 600px;
+        box-shadow: 0 18px 30px -15px rgba(0,0,0,.4);
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="container"&gt;&lt;/div&gt;
+    &lt;script src="https://evaluatly.com/dist/evaluatly-1.0.1.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        Evaluatly.loadUrl('/docs/example/story.json', {
+            "containerId": "container"
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>⚡️ <a href="/docs/example/setup-container.html">Run this example</a></p>
+<h4>Elements of a story</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Item</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>hash</code></strong></td>
+<td style="text-align: left;">An unique id for the story.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>story</code></strong></td>
+<td style="text-align: left;">Contains all the pages and elements of the story.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>theme</code></strong></td>
+<td style="text-align: left;">Contains information about styling.</td>
+</tr>
+</tbody>
+</table>
+<p>For more information, check the <a href="/docs/ref/root.html">reference</a> for a complete list of elements that can be used in the story.</p>
+<h2 class="group"><a href="#form" id="form">#</a> Adding a simple form</h2>
+<p>You can include inputs and forms to collect information.</p>
+<p>Let's create a simple form to collect the name of the person. Update the <strong><code>story</code></strong> element with the code below:</p>
+<pre><code class="language-JSON">{   
+    "...",  
+    "story": {
+        "pages": [
+            {
+                "items": [
+                    { "type": "title", "value": "My first story" },
+                    { "type": "p", "value": "This is an example." },
+                    { "type": "button", "label": "Next", "program": {"next_page": true} }
+                ]
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "What's your name?" },
+                    { "type": "name", "save_key": "name", "required": true, "autofocus": true }  
+                ],
+                "submit" : { 
+                    "label": "Next", 
+                    "input_submit": true,
+                    "program": [ {"next_page": true} ] 
+                } 
+            },
+            {
+                "items": [
+                    { "type": "title", "value": "Hello, {{name}} 👋" }
+                ]
+            }
+        ]
+    },    
+    "..."
+}     </code></pre>
+<p>⚡️ <a href="/docs/example/form.html">Run this example</a></p>
+<p>Observe that the multipage makes the story conversational and pleasant. You can create as many pages as you want and use single or multiple inputs on the page to collect information.</p>
+<blockquote>
+<p>The <strong><code>{{name}}</code></strong> element on the last page will be substituted for the variable <strong><code>name</code></strong> (<em>save_key</em>) saved on the previous page.
+Learn more about <a href="/docs/ref/text.html">text formatting and variable substitution</a>.</p>
+</blockquote>
+<h2 class="group"><a href="#msg" id="msg">#</a> Sending a message</h2>
+<p>To send the information collected to your server, you need to make a <strong><code>call</code></strong> explicitly.</p>
+<p>Let's create a page to send the information to the server:</p>
+<pre><code class="language-JSON">{   
+    "...",  
+    "story": {
+        "pages": [
+            {
+                "items": [
+                    { "type": "title", "value": "My first story" },
+                    { "type": "p", "value": "This is an example." },
+                    { "type": "button", "label": "Next", "program": {"next_page": true} }
+                ]
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "What's your name?" },
+                    { "type": "name", "save_key": "name", "required": true, "autofocus": true }  
+                ],
+                "submit" : { 
+                    "label": "Next", 
+                    "input_submit": true,
+                    "program": [ {"next_page": true} ] 
+                } 
+            },
+            {
+                "items": [
+                    { "type": "question", "value": "Hello, {{name}} 👋, write a message:" },
+                    { "type": "textlong", "save_key": "msg", "autofocus": true,
+                        "submit" : { "program": [ {"next_page": true} ] }  
+                    }
+                ],
+                "submit" : { 
+                    "label": "Send Message", 
+                    "input_submit": true,
+                    "program": [ {"next_page": true} ] 
+                } 
+            },
+            {
+                "history": false,
+                "items": [
+                    { "type": "title", "value": "Sending message..."},
+                    { "type": "exec", "delay": 800, 
+                        "program": [
+                            {"call": { 
+                                "endpoint": "https://e.evaluatly.com/api/e/void"
+                                }
+                            },
+                            {"next_page": true}
+                        ]
+                    }
+                ]
+            },
+            {
+                "items": [
+                    { "type": "image", "src": "https://evaluatly.com/static/img/ok.png" },
+                    { "type": "title", "value": "Your message was sent, {{name}}" }
+                ]
+            }
+        ]
+    },    
+    "..."
+}     </code></pre>
+<p>⚡️ <a href="/docs/example/form-send.html">Run this example</a></p>
+<p>You need to prepare your server to receive and process the message. Learn more in the <a href="/docs/ref/commands.html#call"><code>call</code></a> documentation.</p>
+<h2 class="group"><a href="#try" id="try">#</a> Try it ✨</h2>
+<p>Use the online editor to edit and download the story directly on your browser:</p>
+<p><strong><a href="/try.html?d=/docs/example/try.json">TRY IT →</a></strong></p>
+<h2 class="group"><a href="#downloads" id="downloads">#</a> Downloads</h2>
+<p><a href="/docs/example/form-send.html" download="full-example.html">Download the full page example ↘︎</a>.</p>
+<h4>Evaluatly script</h4>
+<p>If you prefer, you can download the Evaluatly script file, instead of using the CDN. Right-click the link below and select &quot;Save Link as...&quot;:</p>
+<p><a href="https://evaluatly.com/dist/evaluatly-1.0.1.js">Download Script ↘︎</a></p>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
-    <script src="https://evaluatly.com/js/docs.js"></script>
-    <script src="https://evaluatly.com/static/js/highlight.pack.js"></script>
+    <script src="/js/docs.js"></script>
+    <script src="/static/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
