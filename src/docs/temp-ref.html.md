@@ -5,7 +5,7 @@ slug = start
 
 build = false
 
-includes = docs/index.html.md menu menuTop
+includes = index.html.md menu menuTop
 
 ```
 

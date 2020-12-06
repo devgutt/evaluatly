@@ -3,7 +3,7 @@ title = Getting Started
 base = docs.html
 slug = start
 
-includes = docs/start.html.md BODY SUBMENU
+includes = start.html.md BODY SUBMENU
 
 ```
 

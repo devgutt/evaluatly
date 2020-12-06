@@ -10,7 +10,7 @@ module.exports = {
     'render': './index.js',
   },
   output: {
-    path: __dirname + '/../docs/js',
+    path: __dirname + '/../../docs/js',
     filename: '[name].js'
   },
   resolve: {

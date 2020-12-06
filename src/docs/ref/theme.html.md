@@ -1,5 +1,5 @@
 ```INI META
-includes = docs/index.html.md menu menuTop
+includes = index.html.md menu menuTop
 title = Theme
 base = docs.html
 slug = theme

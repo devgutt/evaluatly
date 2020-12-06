@@ -9,7 +9,7 @@ module.exports = {
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly",
-        "_CONFIG": "readonly",
+        "Evaluatly": "readonly",
         "Stripe": "readonly",
         "gtag": "readonly"
     },
