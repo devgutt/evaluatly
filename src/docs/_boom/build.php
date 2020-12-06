@@ -8,9 +8,6 @@ require_once "./bin/boom.php";
 
 $output = realpath(__DIR__."/../../../docs/docs");
 
-echo 'root: ' . $root . "\n";
-echo 'output: ' . $output . "\n";
-
 build($root, 'prod', $output, $DRY_RUN);
 
 
