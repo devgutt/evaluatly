@@ -2,11 +2,11 @@
 
 ROOT=$PWD
 
-# cd $ROOT/render
-# npm run prod
+cd $ROOT/render
+npm run prod
 
-# cd $ROOT/docs/_boom
-# ./build
+cd $ROOT/docs/_boom
+./build
 
 cd $ROOT/..
 git add .

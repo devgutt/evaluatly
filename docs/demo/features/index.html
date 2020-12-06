@@ -276,62 +276,10 @@
                     { "type": "p", "value": "Thank you for using our demo."},
                     { "type": "link", "label": "Back to the website", "program": {"redirect": { "url": "/"}},
                         "style": {"color": "#f1574b"} },
-                    { "type": "link", "label": "Feedback 👋", "program": {"next_page": true},
+                    { "type": "link", "label": "Feedback 👋", "url": "mailto:contact@evaluatly.com",
                         "style": {"color": "#f1574b"} },
                     { "type": "link", "label": "Change theme 💅🏽", "program": {"jump_page": "page_theme"},
                         "style": {"color": "#f1574b"} }
-                ]
-            },
-            {
-                "style_content": {
-                    "align-items": "flex-start"
-                },
-                "items": [
-                    { "type": "title", "value": "Feedback 👋" },
-                    { "type": "p", "value": "Send us your __feedback__, __questions__ or __ideas__!" }, 
-                    { "type": "name", "label": "Name", "save_key": "name", "required": true },
-                    { "type": "email", "label": "Email (If you want a response)", "save_key": "email" },
-                    { "type": "textlong", "save_key": "msg", "label": "Message", "required": true }
-                ],
-                "submit" : {
-                    "label": "Send Message",
-                    "program":  [
-                        {"next_page": true}
-                    ]
-                } 
-            },
-            {
-                "history": false,
-                "env": {
-                    "show_back": false
-                },
-                "items": [
-                    { "type": "title", "value": "Sending message..."},
-                    { "type": "exec", "delay": 500, "program": [
-                        {"call": { 
-                            "endpoint": "https://e.evaluatly.com/api/e/evaluatly/msg", 
-                            "data": [ 
-                                {
-                                    "email_title": "New Message from DEMO",
-                                    "email_reply_to": {"v": "email"},
-                                    "email_reply_to_name": {"v": "name"}
-                                },
-                                "name", "email", "msg", "fruit"] 
-                            }
-                        },
-                        {"next_page": true}
-                    ]}
-                ]
-            },
-            {
-                "env": {
-                    "show_back": false
-                },
-                "items": [
-                    { "type": "image", "src": "https://evaluatly.com/static/img/evaluatly-logo-206x77.png", "alt": "Logo"},
-                    { "type": "title", "value": "Thank you for your message, {{name|first}}!"},
-                    { "type": "link", "label": "Back to the website", "program": [{"redirect": { "url": "/"}} ] },
-                    { "type": "link", "label": "Restart this demo with a different theme", "program": [{"jump_page": "page_theme"} ] }
                 ]
             },
             {
