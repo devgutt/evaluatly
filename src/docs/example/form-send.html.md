@@ -58,7 +58,7 @@ base = raw.html
                             { "type": "exec", "delay": 800, 
                                 "program": [
                                     {"call": { 
-                                        "endpoint": "https://e.evaluatly.com/api/e/void"
+                                        "endpoint": "https://e.evaluatly.github.io/api/e/void"
                                         }
                                     },
                                     {"next_page": true}

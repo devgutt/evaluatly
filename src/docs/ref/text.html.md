@@ -38,7 +38,7 @@ __Link__        | `[`*text*`](`*url*`)`             | Creates a _link_ with the 
 ```
 
 ```JSON
-{"type": "p", "value": "Check our [website](https://evaluatly.com)"}
+{"type": "p", "value": "Check our [website](https://evaluatly.github.io)"}
 ```
 
 Example with [variable substitution](#variables):
@@ -54,7 +54,7 @@ Example in [`check`](/docs/ref/items.html#check) item option label:
 ```JSON
 { "type": "check", 
     "options": [
-        { "save_key": "accept-terms", "label": "I have **read** and **accept** the [terms](https://evaluatly.com/terms)" } 
+        { "save_key": "accept-terms", "label": "I have **read** and **accept** the [terms](https://evaluatly.github.io/terms)" } 
     ] 
 }
 ```
