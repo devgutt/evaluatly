@@ -1,7 +1,7 @@
 {
     "data": {
         "evaluatly_version": "master",
-        "root": "http://eval.local:8080"
+        "root": "http://eval.local:8080/evaluatly"
     }
 
 }
