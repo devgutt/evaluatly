@@ -52,7 +52,7 @@ function body(data) {
                     ${data.code.list.map(item => `<p>${item}</p>`).join("")}
                 </div>
                 <div class="try">
-                    <a href="/try.html?d=/data/try.json">Try it!</a>
+                    <a href="/evaluatly/try.html?d=/evaluatly/data/try.json">Try it!</a>
                 </div>
                 </div>
             </div>

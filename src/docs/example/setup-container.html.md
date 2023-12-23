@@ -24,7 +24,7 @@ base = raw.html
     <div id="container"></div>
     <script src="{% root %}/dist/evaluatly-{% evaluatly_version %}.js"></script>
     <script>
-        Evaluatly.loadUrl('/docs/example/story.json', {
+        Evaluatly.loadUrl('/evaluatly/docs/example/story.json', {
             "containerId": "container"
         });
     </script>

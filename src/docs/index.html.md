@@ -27,7 +27,7 @@ includes = start.html.md BODY SUBMENU
             { "label": "Text", "url": "/evaluatly/docs/ref/text.html", "slug": "text" },
             { "label": "Theme", "url": "/evaluatly/docs/ref/theme.html", "slug": "theme" }
     ] },
-    { "label": "GitHub", "url": "https://github.com/evaluatly/evaluatly-js" }
+    { "label": "GitHub", "url": "https://github.com/devgutt/evaluatly-js" }
 
 ]
 ```

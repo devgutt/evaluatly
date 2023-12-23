@@ -144,7 +144,7 @@ And then, call `Evaluatly.loadUrl`, informing the URL of the JSON file you have 
 <body>
     <script src="{% root %}/dist/evaluatly-{% evaluatly_version %}.js"></script>
     <script>
-        Evaluatly.loadUrl('/docs/example/story.json');
+        Evaluatly.loadUrl('/evaluatly/docs/example/story.json');
     </script>
 </body>
 </html>
@@ -175,7 +175,7 @@ By default, the story will be shown full screen on the page. If you want to plac
     <div id="container"></div>
     <script src="{% root %}/dist/evaluatly-{% evaluatly_version %}.js"></script>
     <script>
-        Evaluatly.loadUrl('/docs/example/story.json', {
+        Evaluatly.loadUrl('/evaluatly/docs/example/story.json', {
             "containerId": "container"
         });
     </script>
@@ -192,7 +192,7 @@ Item              | Description
 **`story`**       | Contains all the pages and elements of the story.
 **`theme`**       | Contains information about styling.
 
-For more information, check the [reference](/docs/ref/root.html) for a complete list of elements that can be used in the story.
+For more information, check the [reference](/evaluatly/docs/ref/root.html) for a complete list of elements that can be used in the story.
 
 ## [#](#form) {#form} Adding a simple form {.group}
 

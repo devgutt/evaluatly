@@ -39,8 +39,8 @@
                     { "type": "title", "value": "Sending message..."},
                     { "type": "exec", "delay": 800, 
                         "program": [
-                            {"call": { 
-                                "endpoint": "https://e.devgutt.github.io/evaluatly/api/e/void"
+                            {"_call": { 
+                                "endpoint": "#"
                                 }
                             },
                             {"next_page": true}
