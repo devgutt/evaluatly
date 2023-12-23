@@ -14,7 +14,7 @@ export default function story(data) {
 }
 
 function loadEvaluatly(data) {
-    loadScript("/dist/evaluatly-1.0.1.js", () => Evaluatly.loadVar(data));
+    loadScript("/evaluatly/dist/evaluatly-1.0.1.js", () => Evaluatly.loadVar(data));
 }
 
 function loadScript(url, onload) {

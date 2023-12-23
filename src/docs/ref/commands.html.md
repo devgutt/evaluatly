@@ -144,7 +144,7 @@ The following parameters will be sent in the __`BODY`__ of the request:
 
 Parameter       | Description
 :---            | :---
-`hash`          | the root attribute [`hash`](/docs/ref/root.html).
+`hash`          | the root attribute [`hash`](/evaluatly/docs/ref/root.html).
 `origin`        | The protocol, hostname, and port number of the caller's URL.
 `data`		    | JSON with the parameters specified in the __`data`__ attribute.
 
@@ -155,7 +155,7 @@ The server must respond with a JSON message containing the following parameters:
 Parameter       | Description
 :---            | :---
 `ok`            | `true`
-`res`		    | List of [commands](/docs/ref/commands.html) to be executed.
+`res`		    | List of [commands](/evaluatly/docs/ref/commands.html) to be executed.
 
 if an **error** occurs:
 
@@ -256,7 +256,7 @@ Values    | Description
 
 Message to be displayed. 
 
-Accepts [text formatting and variables](/docs/ref/text.html).
+Accepts [text formatting and variables](/evaluatly/docs/ref/text.html).
 
 **`interval`**  _optional_
 
@@ -268,7 +268,7 @@ Use `-1` to not hide the alert automatically.
 
 Style to be applied to the alert as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Example
 
@@ -560,11 +560,11 @@ Delete all variables on the local storage:
 
 Command             | Description
 :---                | :---
-[`sub`](#sub)         | Applies [text formatting and variables](/docs/ref/text.html) to a text.
+[`sub`](#sub)         | Applies [text formatting and variables](/evaluatly/docs/ref/text.html) to a text.
 
 ### [#](#sub) {#sub} `sub` {.group} 
 
-Applies [text formatting and variables](/docs/ref/text.html) to a text.
+Applies [text formatting and variables](/evaluatly/docs/ref/text.html) to a text.
 
 #### Argument
 
@@ -623,7 +623,7 @@ Example concatenating text:
 {"+": ["Your name is ", {"v": "name"}]}
 ```
 
-> You can use [text formatting and variables](/docs/ref/text.html) for this type of operation.
+> You can use [text formatting and variables](/evaluatly/docs/ref/text.html) for this type of operation.
 
 Example with multiple operations:
 
@@ -783,7 +783,7 @@ The id of the destination page.
 
 The values can be a literal or a single command call returning a literal.
 
-> Go to [Story](/docs/ref/story.html) for more information about pages.
+> Go to [Story](/evaluatly/docs/ref/story.html) for more information about pages.
 
 The values can be a literal or a single command call returning a literal.
 

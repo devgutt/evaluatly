@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/evaluatly/css/docs.css">
     <title>Page - Evaluatly Docs</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
             <div>
                 <div class="menu">
 	<div class="header">
-		<a href="/docs"><img src="/static/img/evaluatly-logo-96x46.png"/></a>
+		<a href="/evaluatly/docs"><img src="/evaluatly/static/img/evaluatly-logo-96x46.png"/></a>
 		<div class="middle"><span>Docs</span></div>
 		<div>
 			<a href="#" class="hamburger" id="menu-ham">
@@ -24,19 +24,19 @@
 	</div>
 	<ul class="nav" id="menu-list" style="display: none">
 				<li class="">
-			<a href="/docs">Getting Started</a>
+			<a href="/evaluatly/docs">Getting Started</a>
 								</li>
 				<li class="">
-			<a href="/docs/ref">Reference</a>
+			<a href="/evaluatly/docs/ref">Reference</a>
 									<ul>
 								<li class="">
-					<a href="/docs/ref/root.html">Root</a>
+					<a href="/evaluatly/docs/ref/root.html">Root</a>
 									</li>
 								<li class="">
-					<a href="/docs/ref/story.html">Story</a>
+					<a href="/evaluatly/docs/ref/story.html">Story</a>
 									</li>
 								<li class="active">
-					<a href="/docs/ref/page.html">Page</a>
+					<a href="/evaluatly/docs/ref/page.html">Page</a>
 											<div class="onpage mob-hide">
 	<ul>
 <li><a href="#submit">Submitting forms</a></li>
@@ -48,21 +48,21 @@
 	
 									</li>
 								<li class="">
-					<a href="/docs/ref/items.html">Items</a>
+					<a href="/evaluatly/docs/ref/items.html">Items</a>
 									</li>
 								<li class="">
-					<a href="/docs/ref/commands.html">Commands</a>
+					<a href="/evaluatly/docs/ref/commands.html">Commands</a>
 									</li>
 								<li class="">
-					<a href="/docs/ref/text.html">Text</a>
+					<a href="/evaluatly/docs/ref/text.html">Text</a>
 									</li>
 								<li class="">
-					<a href="/docs/ref/theme.html">Theme</a>
+					<a href="/evaluatly/docs/ref/theme.html">Theme</a>
 									</li>
 								</ul>
 					</li>
 				<li class="">
-			<a href="https://github.com/evaluatly/evaluatly-js">GitHub</a>
+			<a href="https://github.com/devgutt/evaluatly-js">GitHub</a>
 								</li>
 			</ul>
 </div>
@@ -78,18 +78,18 @@
 </ul>
                         </div>
                             
-                        <p>A story page that contains the <a href="/docs/ref/items.html">items</a> to be displayed.</p>
+                        <p>A story page that contains the <a href="/evaluatly/docs/ref/items.html">items</a> to be displayed.</p>
 <h3>Attributes</h3>
 <p><strong><code>page_id</code></strong>  <em>optional</em>   </p>
 <p>The unique identifier of the page.</p>
 <p><strong><code>style</code></strong> <em>optional</em></p>
 <p>Style to be applied to the whole page as CSS key-value pairs. </p>
-<p>The values can be a literal value or a single <a href="/docs/ref/commands.html">command</a> call returning a literal value.</p>
+<p>The values can be a literal value or a single <a href="/evaluatly/docs/ref/commands.html">command</a> call returning a literal value.</p>
 <p><strong><code>style_content</code></strong> <em>optional</em></p>
 <p>Style to be applied to the page content as CSS key-value pairs. </p>
-<p>The values can be a literal value or a single <a href="/docs/ref/commands.html">command</a> call returning a literal value.</p>
+<p>The values can be a literal value or a single <a href="/evaluatly/docs/ref/commands.html">command</a> call returning a literal value.</p>
 <p><strong><code>items</code></strong>   </p>
-<p>List of the <a href="/docs/ref/items.html">items</a> of the page.</p>
+<p>List of the <a href="/evaluatly/docs/ref/items.html">items</a> of the page.</p>
 <p><strong><code>submit</code></strong>  <em>optional</em>   </p>
 <p>Options for submitting forms. See more in <a href="#submit">Submitting forms</a> bellow.</p>
 <p><strong><code>history</code></strong>  <em>optional</em>     </p>
@@ -111,7 +111,7 @@
 <p>Percentage number of progress, from 0 to 100. Defaults to the progress of the page.</p>
 <p><strong><code>style</code></strong> <em>optional</em></p>
 <p>Style to be applied to the progress bar as CSS key-value pairs. </p>
-<p>The values can be a literal value or a single <a href="/docs/ref/commands.html">command</a> call returning a literal value.</p>
+<p>The values can be a literal value or a single <a href="/evaluatly/docs/ref/commands.html">command</a> call returning a literal value.</p>
 <h3>Example</h3>
 <pre><code class="language-JSON"> {
     "page_id": "page_start",
@@ -132,11 +132,11 @@
 <h2 class="group"><a href="#submit" id="submit">#</a> Submitting forms</h2>
 <p>Process and save form information to variables.</p>
 <blockquote>
-<p>Tip: To send information to the server, use the <a href="/docs/ref/commands.html#call"><code>call</code></a> command.</p>
+<p>Tip: To send information to the server, use the <a href="/evaluatly/docs/ref/commands.html#call"><code>call</code></a> command.</p>
 </blockquote>
 <h4>Attributes</h4>
 <p><strong><code>program</code></strong>   </p>
-<p>One or more <a href="/docs/ref/commands.html">commands</a> to execute, after processing and saving the variables.</p>
+<p>One or more <a href="/evaluatly/docs/ref/commands.html">commands</a> to execute, after processing and saving the variables.</p>
 <p><strong><code>label</code></strong>   </p>
 <p>Submission button label.</p>
 <p><strong><code>input_submit</code></strong>  <em>optional</em></p>
@@ -212,7 +212,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>receipt_email</code></td>
-<td style="text-align: left;">Key of the variable containing the email that will be used by Stripe to send the receipt for the buyer. See more about email receipts at <a href="https://stripe.com/docs/receipts" target="_blank">Stripe</a>.</td>
+<td style="text-align: left;">Key of the variable containing the email that will be used by Stripe to send the receipt for the buyer. See more about email receipts at <a href="https://stripe.com/evaluatly/docs/receipts" target="_blank">Stripe</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -286,7 +286,7 @@
 <blockquote>
 <p>The <code>secret</code> is created using the <em>secret key</em> associated with the <em>publishable key</em> provided by Stripe.
 For more information on how to create the secret, consult the
-<a href="https://stripe.com/docs/payments/accept-a-payment#web-create-payment-intent" target="_blank">Stripe documentation</a>.</p>
+<a href="https://stripe.com/evaluatly/docs/payments/accept-a-payment#web-create-payment-intent" target="_blank">Stripe documentation</a>.</p>
 </blockquote>
 <p>if an <strong>error</strong> occurs:</p>
 <table>
@@ -351,7 +351,7 @@ For more information on how to create the secret, consult the
 </tr>
 </tbody>
 </table>
-<p>These variables can be retrieved using <a href="/docs/ref/commands.html#data">Data commands</a>.</p>
+<p>These variables can be retrieved using <a href="/evaluatly/docs/ref/commands.html#data">Data commands</a>.</p>
 <p>Example:</p>
 <pre><code class="language-JSON">{ "type": "p", "value": "The item {{payment_ok.title}} was purchased. Payment ID: {{payment_ok.id}}" }</code></pre>
                     </div>
@@ -360,8 +360,8 @@ For more information on how to create the secret, consult the
         </div>
 
     </div>
-    <script src="/js/docs.js"></script>
-    <script src="/static/js/highlight.pack.js"></script>
+    <script src="/evaluatly/js/docs.js"></script>
+    <script src="/evaluatly/static/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

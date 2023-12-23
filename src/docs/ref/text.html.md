@@ -49,7 +49,7 @@ Example with [variable substitution](#variables):
 
 > The substitution is applied before any formatting.
 
-Example in [`check`](/docs/ref/items.html#check) item option label:
+Example in [`check`](/evaluatly/docs/ref/items.html#check) item option label:
 
 ```JSON
 { "type": "check", 

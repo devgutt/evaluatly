@@ -7,7 +7,7 @@ slug = story
 
 ```MD BODY
 
-Story element that contains a set of [pages](/docs/ref/page.html).
+Story element that contains a set of [pages](/evaluatly/docs/ref/page.html).
 
 ### Attributes
 
@@ -49,7 +49,7 @@ Show or hide the brand. The default is `true`.
 
 Text of the brand. Defaults to Evaluatly's brand.
 
-Accepts [text formatting and variables](/docs/ref/text.html).
+Accepts [text formatting and variables](/evaluatly/docs/ref/text.html).
 
 #### `logo` _optional_
 
@@ -63,7 +63,7 @@ Images can be of the type JPEG, GIF, PNG, SVG, ICO, and BMP.
 
 **`program`**  _optional_
 
-One or more [commands](/docs/ref/commands.html) to be executed when the logo is clicked.
+One or more [commands](/evaluatly/docs/ref/commands.html) to be executed when the logo is clicked.
 
 **`width`** _optional_
 
@@ -81,9 +81,9 @@ Text description of the logo image.
 
 Style to be applied to the logo as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
-> Use the `show_logo` [page attribute](/docs/ref/page.html) to control the display of the logo on a specific page.
+> Use the `show_logo` [page attribute](/evaluatly/docs/ref/page.html) to control the display of the logo on a specific page.
 
 #### `progress` _optional_
 
@@ -99,7 +99,7 @@ The quantity used to evaluate the progress. Defaults to the number of pages.
 
 #### `pages`
 
-List of [pages](/docs/ref/page.html) of the story.
+List of [pages](/evaluatly/docs/ref/page.html) of the story.
 
 ### Example
 

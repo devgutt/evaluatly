@@ -7,18 +7,18 @@ slug = ref
 
 ```MD BODY
 
-### [Root](/docs/ref/root.html)
+### [Root](/evaluatly/docs/ref/root.html)
 
-### [Story](/docs/ref/story.html)
+### [Story](/evaluatly/docs/ref/story.html)
 
-### [Page](/docs/ref/page.html)
+### [Page](/evaluatly/docs/ref/page.html)
 
-### [Items](/docs/ref/items.html)
+### [Items](/evaluatly/docs/ref/items.html)
 
-### [Commands](/docs/ref/commands.html)
+### [Commands](/evaluatly/docs/ref/commands.html)
 
-### [Text](/docs/ref/text.html)
+### [Text](/evaluatly/docs/ref/text.html)
 
-### [Theme](/docs/ref/theme.html)
+### [Theme](/evaluatly/docs/ref/theme.html)
 
 ```

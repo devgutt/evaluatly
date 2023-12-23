@@ -57,10 +57,6 @@ base = raw.html
                             { "type": "title", "value": "Sending message..."},
                             { "type": "exec", "delay": 800, 
                                 "program": [
-                                    {"call": { 
-                                        "endpoint": "https://e.devgutt.github.io/evaluatly/api/e/void"
-                                        }
-                                    },
                                     {"next_page": true}
                                 ]
                             }
