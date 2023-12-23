@@ -51,13 +51,13 @@ _title_
 
 Title text.
 
-Accepts [text formatting and variables](/docs/ref/text.html).
+Accepts [text formatting and variables](/evaluatly/docs/ref/text.html).
 
 **`style`** _optional_
 
 Style to be applied to the item as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Examples
 
@@ -81,13 +81,13 @@ _subtitle_
 
 Subtitle text. 
 
-Accepts [text formatting and variables](/docs/ref/text.html).
+Accepts [text formatting and variables](/evaluatly/docs/ref/text.html).
 
 **`style`** _optional_
 
 Style to be applied to the item as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Example
 
@@ -111,13 +111,13 @@ _question_
 
 Subtitle text. 
 
-Accepts [text formatting and variables](/docs/ref/text.html).
+Accepts [text formatting and variables](/evaluatly/docs/ref/text.html).
 
 **`style`** _optional_
 
 Style to be applied to the item as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Examples
 
@@ -141,13 +141,13 @@ _p_
 
 Paragraph text or list of text. 
 
-Accepts [text formatting and variables](/docs/ref/text.html).
+Accepts [text formatting and variables](/evaluatly/docs/ref/text.html).
 
 **`style`** _optional_
 
 Style to be applied to the item as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Examples
 
@@ -163,7 +163,7 @@ Example with list of texts:
 ]}
 ```
 
-Example with [text formatting and variables](/docs/ref/text.html):
+Example with [text formatting and variables](/evaluatly/docs/ref/text.html):
 
 ```JSON
 { "type": "p", "value": "Your name is {{name}}" }
@@ -185,13 +185,13 @@ _code_
 
 Code text. 
 
-Accepts [text formatting and variables](/docs/ref/text.html).
+Accepts [text formatting and variables](/evaluatly/docs/ref/text.html).
 
 **`style`** _optional_
 
 Style to be applied to the item as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Example
 
@@ -213,7 +213,7 @@ _image_
 
 **`src`**  
 
-The URL of the image or a [command](/docs/ref/commands.html) returning a URL.
+The URL of the image or a [command](/evaluatly/docs/ref/commands.html) returning a URL.
 
 Images can be of the type JPEG, GIF, PNG, SVG, ICO, and BMP.
 
@@ -237,7 +237,7 @@ Title of the image presented as a tooltip.
 
 Style to be applied to the item as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Example
 
@@ -274,13 +274,13 @@ If informed, the attribute `program` is ignored.
 
 **`program`**  _optional_
 
-One or more [commands](/docs/ref/commands.html) to be executed.
+One or more [commands](/evaluatly/docs/ref/commands.html) to be executed.
 
 **`style`** _optional_
 
 Style to be applied to the item as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Examples
 
@@ -314,7 +314,7 @@ _line_
 
 Style to be applied to the item as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Example
 
@@ -338,7 +338,7 @@ _space_
 
 Style to be applied to the item as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Example
 
@@ -366,7 +366,7 @@ List of items to be displayed.
 
 Style to be applied to the item as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Example
 
@@ -413,13 +413,13 @@ Describe the embedded content.
 
 **`allow`** _optional_
 
-Specifies a [feature policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Feature_Policy) for the item.
+Specifies a [feature policy](https://developer.mozilla.org/en-US/evaluatly/docs/Web/HTTP/Feature_Policy) for the item.
 
 **`style`** _optional_
 
 Style to be applied to the item as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Example
 
@@ -505,7 +505,7 @@ This attribute is only available for _number_.
 
 **`pattern`**  _optional_
 
-[Pattern](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) the value must match to be valid.  
+[Pattern](https://developer.mozilla.org/en-US/evaluatly/docs/Web/JavaScript/Guide/Regular_Expressions) the value must match to be valid.  
 
 This attribute is not available for _textlong_.  
 
@@ -529,13 +529,13 @@ This attribute is only available for _email_.
 
 Style to be applied to the label as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 **`style_input`** _optional_
 
 Style to be applied to the input as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Examples
 
@@ -575,7 +575,7 @@ The label of the input.
 
 **`show_marker`**  _optional_ 
 
-Shows the check marker. This attribute only works with [`input_submit`](/docs/ref/page.html#submit).
+Shows the check marker. This attribute only works with [`input_submit`](/evaluatly/docs/ref/page.html#submit).
 
 Values: true (default) or false.
 
@@ -595,7 +595,7 @@ Values: true or false (default).
 
 Style to be applied to the label as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### `options`
 
@@ -613,7 +613,7 @@ Option value. This value is saved in the data table with the property `value`.
 
 Option label. This value is saved in the data table with the property `label`.
 
-Accepts [text formatting and variables](/docs/ref/text.html).
+Accepts [text formatting and variables](/evaluatly/docs/ref/text.html).
 
 **`description`**  _optional_ 
 
@@ -623,13 +623,13 @@ Option description.
 
 Style to be applied to the option container as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 **`style`** _optional_
 
 Style to be applied to the option as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Example
 
@@ -665,7 +665,7 @@ The label of the input.
 
 **`show_marker`** _optional_
 
-Shows the check marker. This attribute only works with [`input_submit`](/docs/ref/page.html#submit).
+Shows the check marker. This attribute only works with [`input_submit`](/evaluatly/docs/ref/page.html#submit).
 
 Values: true (default) or false.  
 
@@ -691,7 +691,7 @@ The message shown to the user if the `min` and `max` limits are not respected. D
 
 Style to be applied to the label as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### `options`
 
@@ -713,7 +713,7 @@ Option value. This value is saved in the data table with the property `value`.
 
 Option label. This value is saved in the data table with the property `label`. 
 
-Accepts [text formatting and variables](/docs/ref/text.html).
+Accepts [text formatting and variables](/evaluatly/docs/ref/text.html).
 
 **`description`**  _optional_ 
 
@@ -729,13 +729,13 @@ Values: true or false (default).
 
 Style to be applied to the option container as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 **`style`** _optional_
 
 Style to be applied to the option as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Example
 
@@ -770,13 +770,13 @@ Button label.
 
 **`program`**   
 
-One or more [commands](/docs/ref/commands.html) to be executed.
+One or more [commands](/evaluatly/docs/ref/commands.html) to be executed.
 
 **`style`** _optional_
 
 Style to be applied to the item as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Examples
 
@@ -803,7 +803,7 @@ Programming items.
 
 Item                        | Description
 :---                        | :---
-[`exec`](#exec)             | Run one or more [commands](/docs/ref/commands.html).
+[`exec`](#exec)             | Run one or more [commands](/evaluatly/docs/ref/commands.html).
 [`render-If`](#render-If)   | Conditional item display.
 [`fetch`](#fetch)           | Calls an endpoint to fetch items to be displayed.
 [`fetch-js`](#fetch-js)     | Calls a Javascript function to fetch items to be displayed.
@@ -813,7 +813,7 @@ Item                        | Description
 
 ### [#](#exec) {#exec} `exec` {.group}
 
-Run one or more [commands](/docs/ref/commands.html).
+Run one or more [commands](/evaluatly/docs/ref/commands.html).
 
 #### Attributes
 
@@ -829,7 +829,7 @@ It will execute immediately if not informed (defaults to 0).
 
 **`program`**   
 
-One or more [commands](/docs/ref/commands.html) to be executed.
+One or more [commands](/evaluatly/docs/ref/commands.html) to be executed.
 
 #### Example
 
@@ -953,7 +953,7 @@ The following parameters will be sent in the __`BODY`__ of the request:
 
 Parameter       | Description
 :---            | :---
-`hash`          | the root attribute [`hash`](/docs/ref/root.html).
+`hash`          | the root attribute [`hash`](/evaluatly/docs/ref/root.html).
 `origin`        | The protocol, hostname, and port number of the caller's URL.
 `data`		    | JSON with the parameters specified in the __`data`__ attribute.
 
@@ -964,7 +964,7 @@ The server must respond with a JSON message containing the following parameters:
 Parameter       | Description
 :---            | :---
 `ok`            | `true`
-`res`		    | List of [items](/docs/ref/items.html) to be displayed.
+`res`		    | List of [items](/evaluatly/docs/ref/items.html) to be displayed.
 
 if an **error** occurs:
 
@@ -1049,7 +1049,7 @@ Values    | Description
 
 Message to be displayed. 
 
-Accepts [text formatting and variables](/docs/ref/text.html).
+Accepts [text formatting and variables](/evaluatly/docs/ref/text.html).
 
 **`interval`**  _optional_
 
@@ -1061,7 +1061,7 @@ Use `-1` to not hide the alert automatically.
 
 Style to be applied to the alert as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 #### Example
 
@@ -1084,7 +1084,7 @@ Item                        | Description
 
 Collect card information for payment. 
 
-> To use this item you need to setup the [payment on the page](/docs/ref/page.html#payments).
+> To use this item you need to setup the [payment on the page](/evaluatly/docs/ref/page.html#payments).
 
 #### Attributes
 

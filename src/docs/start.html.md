@@ -80,7 +80,7 @@ Below is a simple example of a story on a regular web page:
 </body>
 </html>
 ```
-⚡️ [Run this example](/docs/example/setup.html)
+⚡️ [Run this example](/evaluatly/docs/example/setup.html)
 
 As you can see, the installation is very simple. [Get the Evaluatly script](#downloads) and create a `SCRIPT` tag on the page. Call `Evaluatly.loadVar` with your JSON story.
 
@@ -149,7 +149,7 @@ And then, call `Evaluatly.loadUrl`, informing the URL of the JSON file you have 
 </body>
 </html>
 ```
-⚡️ [Run this example](/docs/example/setup-url.html)
+⚡️ [Run this example](/evaluatly/docs/example/setup-url.html)
 
 #### Load the story inside a container on the page
 
@@ -182,7 +182,7 @@ By default, the story will be shown full screen on the page. If you want to plac
 </body>
 </html>
 ```
-⚡️ [Run this example](/docs/example/setup-container.html)
+⚡️ [Run this example](/evaluatly/docs/example/setup-container.html)
 
 #### Elements of a story
 
@@ -233,12 +233,12 @@ Let's create a simple form to collect the name of the person. Update the **`stor
     "..."
 }     
 ```
-⚡️ [Run this example](/docs/example/form.html)
+⚡️ [Run this example](/evaluatly/docs/example/form.html)
 
 Observe that the multipage makes the story conversational and pleasant. You can create as many pages as you want and use single or multiple inputs on the page to collect information.
 
 > The **`{{name}}`** element on the last page will be substituted for the variable **`name`** (*save_key*) saved on the previous page. 
-> Learn more about [text formatting and variable substitution](/docs/ref/text.html).
+> Learn more about [text formatting and variable substitution](/evaluatly/docs/ref/text.html).
 
 ## [#](#msg) {#msg} Sending a message {.group}
 
@@ -289,7 +289,7 @@ Let's create a page to send the information to the server:
                     { "type": "exec", "delay": 800, 
                         "program": [
                             {"call": { 
-                                "endpoint": "https://e.devgutt.github.io/evaluatly/api/e/void"
+                                "endpoint": "#"
                                 }
                             },
                             {"next_page": true}
@@ -308,20 +308,20 @@ Let's create a page to send the information to the server:
     "..."
 }     
 ```
-⚡️ [Run this example](/docs/example/form-send.html)
+⚡️ [Run this example](/evaluatly/docs/example/form-send.html)
 
-You need to prepare your server to receive and process the message. Learn more in the [`call`](/docs/ref/commands.html#call) documentation.
+You need to prepare your server to receive and process the message. Learn more in the [`call`](/evaluatly/docs/ref/commands.html#call) documentation.
 
 ## [#](#try) {#try} Try it ✨{.group}
 
 Use the online editor to edit and download the story directly on your browser:
 
-**[TRY IT →](/try.html?d=/docs/example/try.json)**
+**[TRY IT →](/evaluatly/try.html?d=/evaluatly/docs/example/try.json)**
 
 
 ## [#](#downloads) {#downloads} Downloads {.group}
 
-<a href="/docs/example/form-send.html" download="full-example.html">Download the full page example ↘︎</a>.
+<a href="/evaluatly/docs/example/form-send.html" download="full-example.html">Download the full page example ↘︎</a>.
 
 #### Evaluatly script 
 

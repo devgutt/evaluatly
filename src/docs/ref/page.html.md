@@ -14,7 +14,7 @@ slug = page
 
 ```MD BODY
 
-A story page that contains the [items](/docs/ref/items.html) to be displayed.
+A story page that contains the [items](/evaluatly/docs/ref/items.html) to be displayed.
 
 ### Attributes
 
@@ -26,17 +26,17 @@ The unique identifier of the page.
 
 Style to be applied to the whole page as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 **`style_content`** _optional_
 
 Style to be applied to the page content as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 **`items`**   
 
-List of the [items](/docs/ref/items.html) of the page.
+List of the [items](/evaluatly/docs/ref/items.html) of the page.
 
 **`submit`**  _optional_   
 
@@ -80,7 +80,7 @@ Percentage number of progress, from 0 to 100. Defaults to the progress of the pa
 
 Style to be applied to the progress bar as CSS key-value pairs. 
 
-The values can be a literal value or a single [command](/docs/ref/commands.html) call returning a literal value.
+The values can be a literal value or a single [command](/evaluatly/docs/ref/commands.html) call returning a literal value.
 
 ### Example
 
@@ -107,13 +107,13 @@ The values can be a literal value or a single [command](/docs/ref/commands.html)
 
 Process and save form information to variables.
 
-> Tip: To send information to the server, use the [`call`](/docs/ref/commands.html#call) command.
+> Tip: To send information to the server, use the [`call`](/evaluatly/docs/ref/commands.html#call) command.
 
 #### Attributes
 
  **`program`**   
 
-One or more [commands](/docs/ref/commands.html) to execute, after processing and saving the variables.
+One or more [commands](/evaluatly/docs/ref/commands.html) to execute, after processing and saving the variables.
 
 **`label`**   
 
@@ -202,7 +202,7 @@ Parameter       | Description
 :---            | :---
 `name`          | Key of the variable containing the name of the buyer.
 `email`		    | Key of the variable containing the email of the buyer.
-`receipt_email` | Key of the variable containing the email that will be used by Stripe to send the receipt for the buyer. See more about email receipts at <a href="https://stripe.com/docs/receipts" target="_blank">Stripe</a>.
+`receipt_email` | Key of the variable containing the email that will be used by Stripe to send the receipt for the buyer. See more about email receipts at <a href="https://stripe.com/evaluatly/docs/receipts" target="_blank">Stripe</a>.
 
 #### Example
 
@@ -260,7 +260,7 @@ Parameter       | Description
 
 > The `secret` is created using the _secret key_ associated with the _publishable key_ provided by Stripe.
 > For more information on how to create the secret, consult the 
-> <a href="https://stripe.com/docs/payments/accept-a-payment#web-create-payment-intent" target="_blank">Stripe documentation</a>.
+> <a href="https://stripe.com/evaluatly/docs/payments/accept-a-payment#web-create-payment-intent" target="_blank">Stripe documentation</a>.
 
 if an **error** occurs:
 
@@ -302,7 +302,7 @@ Property       | Description
 `currency`		| The currency of the payment. 
 `title`	        | The title of the item. 
 
-These variables can be retrieved using [Data commands](/docs/ref/commands.html#data).
+These variables can be retrieved using [Data commands](/evaluatly/docs/ref/commands.html#data).
 
 Example:
 

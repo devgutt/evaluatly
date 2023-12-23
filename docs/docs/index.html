@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/evaluatly/css/docs.css">
     <title>Getting Started - Evaluatly Docs</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
             <div>
                 <div class="menu">
 	<div class="header">
-		<a href="/docs"><img src="/static/img/evaluatly-logo-96x46.png"/></a>
+		<a href="/evaluatly/docs"><img src="/evaluatly/static/img/evaluatly-logo-96x46.png"/></a>
 		<div class="middle"><span>Docs</span></div>
 		<div>
 			<a href="#" class="hamburger" id="menu-ham">
@@ -24,7 +24,7 @@
 	</div>
 	<ul class="nav" id="menu-list" style="display: none">
 				<li class="active">
-			<a href="/docs">Getting Started</a>
+			<a href="/evaluatly/docs">Getting Started</a>
 						<div class="onpage mob-hide">
 	<ul>
 <li><a href="#setup">Creating a story</a></li>
@@ -39,28 +39,28 @@
 	
 								</li>
 				<li class="">
-			<a href="/docs/ref">Reference</a>
+			<a href="/evaluatly/docs/ref">Reference</a>
 									<ul>
 								<li class="">
-					<a href="/docs/ref/root.html">Root</a>
+					<a href="/evaluatly/docs/ref/root.html">Root</a>
 									</li>
 								<li class="">
-					<a href="/docs/ref/story.html">Story</a>
+					<a href="/evaluatly/docs/ref/story.html">Story</a>
 									</li>
 								<li class="">
-					<a href="/docs/ref/page.html">Page</a>
+					<a href="/evaluatly/docs/ref/page.html">Page</a>
 									</li>
 								<li class="">
-					<a href="/docs/ref/items.html">Items</a>
+					<a href="/evaluatly/docs/ref/items.html">Items</a>
 									</li>
 								<li class="">
-					<a href="/docs/ref/commands.html">Commands</a>
+					<a href="/evaluatly/docs/ref/commands.html">Commands</a>
 									</li>
 								<li class="">
-					<a href="/docs/ref/text.html">Text</a>
+					<a href="/evaluatly/docs/ref/text.html">Text</a>
 									</li>
 								<li class="">
-					<a href="/docs/ref/theme.html">Theme</a>
+					<a href="/evaluatly/docs/ref/theme.html">Theme</a>
 									</li>
 								</ul>
 					</li>
@@ -140,7 +140,7 @@
     &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<p>⚡️ <a href="/docs/example/setup.html">Run this example</a></p>
+<p>⚡️ <a href="/evaluatly/docs/example/setup.html">Run this example</a></p>
 <p>As you can see, the installation is very simple. <a href="#downloads">Get the Evaluatly script</a> and create a <code>SCRIPT</code> tag on the page. Call <code>Evaluatly.loadVar</code> with your JSON story.</p>
 <h4>Load the story from a JSON file</h4>
 <p>You can also load your story from a JSON file, using <code>Evaluatly.loadUrl</code>. First, create the file with the JSON only:</p>
@@ -199,7 +199,7 @@
     &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<p>⚡️ <a href="/docs/example/setup-url.html">Run this example</a></p>
+<p>⚡️ <a href="/evaluatly/docs/example/setup-url.html">Run this example</a></p>
 <h4>Load the story inside a container on the page</h4>
 <p>By default, the story will be shown full screen on the page. If you want to place the story on a container inside the page, you can use the <code>containerId</code> parameter:</p>
 <pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
@@ -227,7 +227,7 @@
     &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<p>⚡️ <a href="/docs/example/setup-container.html">Run this example</a></p>
+<p>⚡️ <a href="/evaluatly/docs/example/setup-container.html">Run this example</a></p>
 <h4>Elements of a story</h4>
 <table>
 <thead>
@@ -286,11 +286,11 @@
     },    
     "..."
 }     </code></pre>
-<p>⚡️ <a href="/docs/example/form.html">Run this example</a></p>
+<p>⚡️ <a href="/evaluatly/docs/example/form.html">Run this example</a></p>
 <p>Observe that the multipage makes the story conversational and pleasant. You can create as many pages as you want and use single or multiple inputs on the page to collect information.</p>
 <blockquote>
 <p>The <strong><code>{{name}}</code></strong> element on the last page will be substituted for the variable <strong><code>name</code></strong> (<em>save_key</em>) saved on the previous page.
-Learn more about <a href="/docs/ref/text.html">text formatting and variable substitution</a>.</p>
+Learn more about <a href="/evaluatly/docs/ref/text.html">text formatting and variable substitution</a>.</p>
 </blockquote>
 <h2 class="group"><a href="#msg" id="msg">#</a> Sending a message</h2>
 <p>To send the information collected to your server, you need to make a <strong><code>call</code></strong> explicitly.</p>
@@ -337,7 +337,7 @@ Learn more about <a href="/docs/ref/text.html">text formatting and variable subs
                     { "type": "exec", "delay": 800, 
                         "program": [
                             {"call": { 
-                                "endpoint": "https://e.devgutt.github.io/evaluatly/api/e/void"
+                                "endpoint": "#"
                                 }
                             },
                             {"next_page": true}
@@ -355,13 +355,13 @@ Learn more about <a href="/docs/ref/text.html">text formatting and variable subs
     },    
     "..."
 }     </code></pre>
-<p>⚡️ <a href="/docs/example/form-send.html">Run this example</a></p>
-<p>You need to prepare your server to receive and process the message. Learn more in the <a href="/docs/ref/commands.html#call"><code>call</code></a> documentation.</p>
+<p>⚡️ <a href="/evaluatly/docs/example/form-send.html">Run this example</a></p>
+<p>You need to prepare your server to receive and process the message. Learn more in the <a href="/evaluatly/docs/ref/commands.html#call"><code>call</code></a> documentation.</p>
 <h2 class="group"><a href="#try" id="try">#</a> Try it ✨</h2>
 <p>Use the online editor to edit and download the story directly on your browser:</p>
-<p><strong><a href="/try.html?d=/docs/example/try.json">TRY IT →</a></strong></p>
+<p><strong><a href="/evaluatly/try.html?d=/evaluatly/docs/example/try.json">TRY IT →</a></strong></p>
 <h2 class="group"><a href="#downloads" id="downloads">#</a> Downloads</h2>
-<p><a href="/docs/example/form-send.html" download="full-example.html">Download the full page example ↘︎</a>.</p>
+<p><a href="/evaluatly/docs/example/form-send.html" download="full-example.html">Download the full page example ↘︎</a>.</p>
 <h4>Evaluatly script</h4>
 <p>If you prefer, you can download the Evaluatly script file, instead of using the CDN. Right-click the link below and select &quot;Save Link as...&quot;:</p>
 <p><a href="https://devgutt.github.io/evaluatly/dist/evaluatly-1.0.2.js">Download Script ↘︎</a></p>
@@ -371,8 +371,8 @@ Learn more about <a href="/docs/ref/text.html">text formatting and variable subs
         </div>
 
     </div>
-    <script src="/js/docs.js"></script>
-    <script src="/static/js/highlight.pack.js"></script>
+    <script src="/evaluatly/js/docs.js"></script>
+    <script src="/evaluatly/static/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

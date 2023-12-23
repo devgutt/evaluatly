@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/evaluatly/css/docs.css">
     <title>Commands - Evaluatly Docs</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
             <div>
                 <div class="menu">
 	<div class="header">
-		<a href="/docs"><img src="/static/img/evaluatly-logo-96x46.png"/></a>
+		<a href="/evaluatly/docs"><img src="/evaluatly/static/img/evaluatly-logo-96x46.png"/></a>
 		<div class="middle"><span>Docs</span></div>
 		<div>
 			<a href="#" class="hamburger" id="menu-ham">
@@ -24,25 +24,25 @@
 	</div>
 	<ul class="nav" id="menu-list" style="display: none">
 				<li class="">
-			<a href="/docs">Getting Started</a>
+			<a href="/evaluatly/docs">Getting Started</a>
 								</li>
 				<li class="">
-			<a href="/docs/ref">Reference</a>
+			<a href="/evaluatly/docs/ref">Reference</a>
 									<ul>
 								<li class="">
-					<a href="/docs/ref/root.html">Root</a>
+					<a href="/evaluatly/docs/ref/root.html">Root</a>
 									</li>
 								<li class="">
-					<a href="/docs/ref/story.html">Story</a>
+					<a href="/evaluatly/docs/ref/story.html">Story</a>
 									</li>
 								<li class="">
-					<a href="/docs/ref/page.html">Page</a>
+					<a href="/evaluatly/docs/ref/page.html">Page</a>
 									</li>
 								<li class="">
-					<a href="/docs/ref/items.html">Items</a>
+					<a href="/evaluatly/docs/ref/items.html">Items</a>
 									</li>
 								<li class="active">
-					<a href="/docs/ref/commands.html">Commands</a>
+					<a href="/evaluatly/docs/ref/commands.html">Commands</a>
 											<div class="onpage mob-hide">
 	<ul>
 <li><a href="#programming">Programming</a></li>
@@ -60,10 +60,10 @@
 	
 									</li>
 								<li class="">
-					<a href="/docs/ref/text.html">Text</a>
+					<a href="/evaluatly/docs/ref/text.html">Text</a>
 									</li>
 								<li class="">
-					<a href="/docs/ref/theme.html">Theme</a>
+					<a href="/evaluatly/docs/ref/theme.html">Theme</a>
 									</li>
 								</ul>
 					</li>
@@ -207,7 +207,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><code>hash</code></td>
-<td style="text-align: left;">the root attribute <a href="/docs/ref/root.html"><code>hash</code></a>.</td>
+<td style="text-align: left;">the root attribute <a href="/evaluatly/docs/ref/root.html"><code>hash</code></a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>origin</code></td>
@@ -235,7 +235,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>res</code></td>
-<td style="text-align: left;">List of <a href="/docs/ref/commands.html">commands</a> to be executed.</td>
+<td style="text-align: left;">List of <a href="/evaluatly/docs/ref/commands.html">commands</a> to be executed.</td>
 </tr>
 </tbody>
 </table>
@@ -331,13 +331,13 @@
 </table>
 <p><strong><code>msg</code></strong> </p>
 <p>Message to be displayed. </p>
-<p>Accepts <a href="/docs/ref/text.html">text formatting and variables</a>.</p>
+<p>Accepts <a href="/evaluatly/docs/ref/text.html">text formatting and variables</a>.</p>
 <p><strong><code>interval</code></strong>  <em>optional</em></p>
 <p>The period in milliseconds that the alert will be displayed. (1000 milliseconds = 1 second). The default is 3000 milliseconds.</p>
 <p>Use <code>-1</code> to not hide the alert automatically.</p>
 <p><strong><code>style</code></strong> <em>optional</em></p>
 <p>Style to be applied to the alert as CSS key-value pairs. </p>
-<p>The values can be a literal value or a single <a href="/docs/ref/commands.html">command</a> call returning a literal value.</p>
+<p>The values can be a literal value or a single <a href="/evaluatly/docs/ref/commands.html">command</a> call returning a literal value.</p>
 <h4>Example</h4>
 <pre><code class="language-JSON">{"alert": {"is": "info", "interval": 5000, "msg": "Hello there!"}}</code></pre>
 <hr />
@@ -522,12 +522,12 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><a href="#sub"><code>sub</code></a></td>
-<td style="text-align: left;">Applies <a href="/docs/ref/text.html">text formatting and variables</a> to a text.</td>
+<td style="text-align: left;">Applies <a href="/evaluatly/docs/ref/text.html">text formatting and variables</a> to a text.</td>
 </tr>
 </tbody>
 </table>
 <h3 class="group"><a href="#sub" id="sub">#</a> <code>sub</code></h3>
-<p>Applies <a href="/docs/ref/text.html">text formatting and variables</a> to a text.</p>
+<p>Applies <a href="/evaluatly/docs/ref/text.html">text formatting and variables</a> to a text.</p>
 <h4>Argument</h4>
 <p>Text to process the substitutions.</p>
 <h4>Return</h4>
@@ -576,7 +576,7 @@
 <p>Example concatenating text:</p>
 <pre><code class="language-JSON">{"+": ["Your name is ", {"v": "name"}]}</code></pre>
 <blockquote>
-<p>You can use <a href="/docs/ref/text.html">text formatting and variables</a> for this type of operation.</p>
+<p>You can use <a href="/evaluatly/docs/ref/text.html">text formatting and variables</a> for this type of operation.</p>
 </blockquote>
 <p>Example with multiple operations:</p>
 <pre><code class="language-JSON">{"*": [ {"+": [ {"v": "X"}, {"v": "Y"} ]}, 100 ]}</code></pre>
@@ -726,7 +726,7 @@
 <p>The id of the destination page.</p>
 <p>The values can be a literal or a single command call returning a literal.</p>
 <blockquote>
-<p>Go to <a href="/docs/ref/story.html">Story</a> for more information about pages.</p>
+<p>Go to <a href="/evaluatly/docs/ref/story.html">Story</a> for more information about pages.</p>
 </blockquote>
 <p>The values can be a literal or a single command call returning a literal.</p>
 <h4>Examples</h4>
@@ -844,8 +844,8 @@
         </div>
 
     </div>
-    <script src="/js/docs.js"></script>
-    <script src="/static/js/highlight.pack.js"></script>
+    <script src="/evaluatly/js/docs.js"></script>
+    <script src="/evaluatly/static/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

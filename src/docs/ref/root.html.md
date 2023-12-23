@@ -24,11 +24,11 @@ Unique story identifier.
 
 **`story`**   
 
-The elements of the [story](/docs/ref/story.html).
+The elements of the [story](/evaluatly/docs/ref/story.html).
 
 **`theme`**    
 
-The [style](/docs/ref/theme.html) of the story.
+The [style](/evaluatly/docs/ref/theme.html) of the story.
 
 **`data`** _optional_
 
