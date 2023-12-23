@@ -6,7 +6,7 @@ export default function footer(foot) {
         <div class="lnk">
             <div class="logo">
                 <div>
-                    <a href="/"><img src="${foot.logo}"/></a>
+                    <a href="/evaluatly"><img src="${foot.logo}"/></a>
                 </div>
             </div>
             ${foot.nav.map(item => `
@@ -18,7 +18,7 @@ export default function footer(foot) {
         </div>
         <div class="cop">
             <div>
-                <div>© 2020 Evaluatly</div>
+                <div>© 2020&ndash; Evaluatly</div>
                 <div>Created by <strong>${textFormatting(foot.creator)}</strong></div>
             </div>
         </div>

@@ -3,7 +3,7 @@ export default function header(nav) {
     return `
     <header class="header">
         <div>
-            <div><a href="/"><img class="logo" src="${nav.logo}"/></a></div>
+            <div><a href="/evaluatly"><img class="logo" src="${nav.logo}"/></a></div>
             <div class="middle"></div>
             <div class="nav">
                 <ul class="list">
