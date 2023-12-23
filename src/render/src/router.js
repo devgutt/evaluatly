@@ -1,4 +1,4 @@
-import { el } from "wdr-render-basic";
+import { appendElement, createElement } from "wdr-render-basic";
 
 import homepage from './homepage';
 import legal from './legal';
@@ -33,17 +33,17 @@ export function router(data) {
 
 function load(title, fn) {
 
-    el.append(document.head, [
-        el.create('meta', {charset: "utf-8"}),
-        el.create('meta', {name: "viewport", content: "width=device-width", 'initial-scale': 1}),
-        el.create('title', {}, title)
+    appendElement(document.head, [
+        createElement('meta', {charset: "utf-8"}),
+        createElement('meta', {name: "viewport", content: "width=device-width", 'initial-scale': 1}),
+        createElement('title', {}, title)
     ]);
 
-    const e = el.create('link', {rel: "stylesheet", href: '/css/main.css'});
+    const e = createElement('link', {rel: "stylesheet", href: '/evaluatly/css/main.css'});
     if (fn) {
         e.onload = fn;
     }
-    el.append(document.head, e);
+    appendElement(document.head, e);
 }
 
 
