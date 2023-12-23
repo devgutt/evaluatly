@@ -46,7 +46,7 @@
                 "items": [
                     { "type": "title", "value": "{{fruit.label}} is awesome, {{name|first}}" },
                     { "type": "button", "label": "Get Started Free", "program": [
-                        {"redirect": {"url": "/docs"}}
+                        {"redirect": {"url": "/evaluatly/docs"}}
                     ] 
                 }
                 ]
