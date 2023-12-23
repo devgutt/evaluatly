@@ -244,7 +244,7 @@ The values can be a literal value or a single [command](/docs/ref/commands.html)
 ```JSON
 { 
     "type": "image", 
-    "src": "https://devgutt.github.io/evaluatly.github.io/static/img/luna-avatar.png", 
+    "src": "https://devgutt.github.io/evaluatly/static/img/luna-avatar.png", 
     "width": 200, 
     "title": "Luna picture" 
 }
@@ -285,7 +285,7 @@ The values can be a literal value or a single [command](/docs/ref/commands.html)
 #### Examples
 
 ```JSON
-{ "type": "link", "label": "Go to evaluatly", "url": "https://devgutt.github.io/evaluatly.github.io" }
+{ "type": "link", "label": "Go to evaluatly", "url": "https://devgutt.github.io/evaluatly" }
 ```
 
 ```JSON
