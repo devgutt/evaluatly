@@ -289,7 +289,7 @@ Let's create a page to send the information to the server:
                     { "type": "exec", "delay": 800, 
                         "program": [
                             {"call": { 
-                                "endpoint": "https://e.evaluatly.github.io/api/e/void"
+                                "endpoint": "https://e.devgutt.github.io/evaluatly.github.io/api/e/void"
                                 }
                             },
                             {"next_page": true}

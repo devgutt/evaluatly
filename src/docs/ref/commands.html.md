@@ -227,7 +227,7 @@ The value associated with the parameter.
 
 #### Example
 
-To get the parameter `sid`, considering the current location `https://p.evaluatly.github.io/acc/tst?sid=234`:
+To get the parameter `sid`, considering the current location `https://p.devgutt.github.io/evaluatly.github.io/acc/tst?sid=234`:
 
 ```JSON
 {"qs": "sid"}

@@ -40,7 +40,7 @@
                     { "type": "exec", "delay": 800, 
                         "program": [
                             {"call": { 
-                                "endpoint": "https://e.evaluatly.github.io/api/e/void"
+                                "endpoint": "https://e.devgutt.github.io/evaluatly.github.io/api/e/void"
                                 }
                             },
                             {"next_page": true}
@@ -50,7 +50,7 @@
             },
             {
                 "items": [
-                    { "type": "image", "src": "https://evaluatly.github.io/static/img/ok.png" },
+                    { "type": "image", "src": "https://devgutt.github.io/evaluatly.github.io/static/img/ok.png" },
                     { "type": "title", "value": "Your message was sent, {{name}}" }
                 ]
             }
